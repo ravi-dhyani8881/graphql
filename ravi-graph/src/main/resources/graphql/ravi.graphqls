@@ -1,0 +1,22 @@
+extend type Query {
+ findraviByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): raviResponse
+}
+
+type raviResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsravi]
+}
+  
+type Recordsravi {
+ravi-graph-change: INTEGER
+ravi-Field2: VARCHAR
+
+
+    findraviByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): raviResponse
+    findraviByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): raviResponse
+
+}
