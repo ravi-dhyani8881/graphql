@@ -12,7 +12,7 @@ type ravi-channelResponse {
 }
   
 type Recordsravi-channel {
-ravi-graph-change: INTEGER
+ravi-page-change: INTEGER
 ravi-Field2: VARCHAR
 
 
