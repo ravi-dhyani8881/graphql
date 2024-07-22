@@ -12,20 +12,20 @@ type headsheetResponse {
 }
   
 type Recordsheadsheet {
-id: String
-customer_id: String
-employee_id: String
-order_date: String
-required_date: String
-shipped_date: String
-ship_via: String
-freight: String
-ship_name: String
-ship_address: String
-ship_city: String
-ship_region: String
-ship_postal_code: String
-ship_country: String
+id: string
+customer_id: string
+employee_id: string
+order_date: string
+required_date: string
+shipped_date: string
+ship_via: string
+freight: string
+ship_name: string
+ship_address: string
+ship_city: string
+ship_region: string
+ship_postal_code: string
+ship_country: string
 
 
     findravime2ByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ravime2Response
