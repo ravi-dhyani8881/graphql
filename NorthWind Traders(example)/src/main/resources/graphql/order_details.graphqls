@@ -1,0 +1,23 @@
+extend type Query {
+ findorder_detailsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): order_detailsResponse
+}
+
+type order_detailsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsorder_details]
+}
+  
+type Recordsorder_details {
+order_id: INTEGER
+product_id: INTEGER
+unit_price: BIGINT
+quantity: SMALLINT
+discount: FLOAT
+
+
+
+}

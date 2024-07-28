@@ -1,0 +1,22 @@
+extend type Query {
+ findshippersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): shippersResponse
+}
+
+type shippersResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsshippers]
+}
+  
+type Recordsshippers {
+id: INTEGER
+company_name: VARCHAR(40)
+phone: VARCHAR(24)
+
+
+    findordersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ordersResponse
+
+}

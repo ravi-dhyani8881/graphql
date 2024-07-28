@@ -1,0 +1,33 @@
+extend type Query {
+ findordersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ordersResponse
+}
+
+type ordersResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsorders]
+}
+  
+type Recordsorders {
+id: INTEGER
+customer_id: INTEGER
+employee_id: INTEGER
+order_date: DATE
+required_date: DATE
+shipped_date: DATE
+ship_via: INTEGER
+freight: BIGINT
+ship_name: VARCHAR(40)
+ship_address: VARCHAR(60)
+ship_city: INTEGER
+ship_region: VARCHAR(15)
+ship_postal_code: VARCHAR(10)
+ship_country: VARCHAR(15)
+
+
+    findorder_detailsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): order_detailsResponse
+
+}
