@@ -23,9 +23,11 @@ jobs:
     - name: Log event payload to a file
       run: echo '${{ toJson(github.event) }}' > event_payload.json
 
-    - name: Read project name from payload into environment variable
-      id: read_payload
-      run: echo "PROJECT_PAYLOAD=$(cat event_payload.json | jq -c .client_payload.data.projectName)" >> $GITHUB_ENV
+    - name: Extract projectName and write to file.json
+      run: |
+        projectName=$(jq -r '.client_payload.data' event_payload.json)
+        echo "Extracted projectName: $projectName"
+        echo "$projectName" > file.json
 
     - name: Verify the project name
       run: echo "Project Name:" ${{ env.PROJECT_PAYLOAD }}
