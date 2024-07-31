@@ -23,6 +23,13 @@ jobs:
     - name: Log event payload to a file
       run: echo '${{ toJson(github.event) }}' > event_payload.json
 
+    - name: Print the location and contents of file.json
+      run: |
+        echo "Location of file.json: $(pwd)/event_payload.json"
+        echo "Contents of event_payload.json:"
+        cat event_payload.json
+        cat ${{ github.workspace }}/event_payload.json
+        
     - name: Extract projectName and write to file.json
       run: |
         projectName=$(jq -r '.projectName' event_payload.json)
