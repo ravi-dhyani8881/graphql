@@ -21,7 +21,8 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Log event payload to a file
-      run: echo '${{ toJson(github.event) }}' > event_payload.json
+      run: echo '${{ toJson(github.event.client_payload) }}' > event_payload.json
+
 
     - name: Print the location and contents of file.json
       run: |
@@ -32,7 +33,7 @@ jobs:
         
     - name: Extract projectName and write to file.json
       run: |
-        projectName=$(jq -r '.projectName' event_payload.json)
+        projectName=$(jq -r '.data.projectName' event_payload.json)
         echo "Extracted projectName: $projectName"
         echo "$projectName" > file.json
 
