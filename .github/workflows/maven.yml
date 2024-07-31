@@ -60,6 +60,6 @@ jobs:
 
     # Build Docker image in the directory specified by PROJECT_PAYLOAD
     - name: Build Docker image
-      run: docker build -t ravi88881/my-graphql-code-app-image:latest .
-           docker push ravi88881/my-graphql-code-app-image:latest
+      run: docker build -t my-graphql-code-app-image:latest .
+           docker push my-graphql-code-app-image:latest
       working-directory: ${{ env.PROJECT_PAYLOAD }}
