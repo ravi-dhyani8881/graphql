@@ -67,4 +67,4 @@ jobs:
 
     # Push Docker image to Docker Hub
     - name: Push Docker image
-      run: docker push my-chef-solo-image:latest
+      run: docker push my-graphql-code-app-image:latest
