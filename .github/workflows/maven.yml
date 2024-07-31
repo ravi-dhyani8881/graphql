@@ -36,9 +36,10 @@ jobs:
         projectName=$(jq -r '.client_payload.data.projectName' event_payload.json)
         echo "Extracted projectName: $projectName"
         echo "$projectName" > file.json
+        echo "PROJECT_PAYLOAD=$projectName" >> $GITHUB_ENV
 
     - name: Verify the project name
-      run: echo "Project Name:" ${{ env.PROJECT_PAYLOAD }}
+      run: echo "Project Name: ${{ env.PROJECT_PAYLOAD }}"
 
     - name: Set up JDK 17
       uses: actions/setup-java@v4
