@@ -26,7 +26,10 @@ jobs:
     - name: Read project name from payload into environment variable
       id: read_payload
       run: echo "PROJECT_PAYLOAD=$(cat event_payload.json | jq -c .client_payload.data.projectName)" >> $GITHUB_ENV
-      
+
+    - name: Verify the project name
+      run: echo "Project Name:" ${{ env.PROJECT_PAYLOAD }}
+
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
