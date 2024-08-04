@@ -44,7 +44,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-        
+
+    - name: Checkout the specific branch
+      run: |
+        git fetch origin ${{ env.BRANCH_NAME }}:${{ env.BRANCH_NAME }}
+        git checkout ${{ env.BRANCH_NAME }}
+
     - name: Build with Maven
       run: mvn clean install
       working-directory: ${{ env.PROJECT_PAYLOAD }}
