@@ -48,7 +48,7 @@ jobs:
     - name: Checkout the specific branch
       run: |
         git fetch origin ${{ env.BRANCH_NAME }}:${{ env.BRANCH_NAME }}
-        git checkout ${{ env.BRANCH_NAME }}
+        git checkout main
 
     - name: Build with Maven
       run: mvn clean install
