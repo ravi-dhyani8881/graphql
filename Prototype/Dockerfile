@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jre-slim
+FROM openjdk:17-jre-slim
 EXPOSE 8080
 # ADD target/Prototype-0.0.1-SNAPSHOT.jar Prototype-0.0.1-SNAPSHOT.jar
 
