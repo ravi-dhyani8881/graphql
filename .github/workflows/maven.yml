@@ -50,6 +50,9 @@ jobs:
         git fetch origin ${{ env.BRANCH_NAME }}:${{ env.BRANCH_NAME }}
         git checkout main
 
+    - name: Print Java version
+      run: java -version
+
     - name: Build with Maven
       run: mvn clean install
       working-directory: ${{ env.PROJECT_PAYLOAD }}
