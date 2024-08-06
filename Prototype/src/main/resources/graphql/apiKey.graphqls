@@ -1,0 +1,24 @@
+extend type Query {
+ findapiKeyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): apiKeyResponse
+}
+
+type apiKeyResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsapiKey]
+}
+  
+type RecordsapiKey {
+ID: String
+userId: String
+apiKey: String
+lastUpdate: String
+addedDate: String
+status: String
+
+
+
+}
