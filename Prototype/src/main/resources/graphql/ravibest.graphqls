@@ -12,15 +12,15 @@ type ravibestResponse {
 }
   
 type Recordsravibest {
-id: String
-name: String
-supplier_id: String
-quantity_per_unit: String
-unit_price: String
-units_in_stock: String
-units_on_order: String
-recorder_level: String
-discontinued: String
+id: string
+name: string
+supplier_id: string
+quantity_per_unit: string
+unit_price: string
+units_in_stock: string
+units_on_order: string
+recorder_level: string
+discontinued: string
 
 
     findravime2ByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ravime2Response
