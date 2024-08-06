@@ -12,12 +12,12 @@ type apiKeyResponse {
 }
   
 type RecordsapiKey {
-ID: String
-userId: String
-apiKey: String
-lastUpdate: String
-addedDate: String
-status: String
+ID: string
+userId: string
+apiKey: string
+lastUpdate: string
+addedDate: string
+status: string
 
 
 
