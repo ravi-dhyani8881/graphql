@@ -15,7 +15,6 @@ type Recordsheadsheet {
 id: String
 customer_id: String
 ship_country: String
-}
 
     findravime2ByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ravime2Response
 

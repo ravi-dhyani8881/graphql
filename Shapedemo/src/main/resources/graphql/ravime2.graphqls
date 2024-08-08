@@ -17,7 +17,6 @@ product_id: String
 unit_price: String
 quantity: String
 discount: String
-}
 
 
 }

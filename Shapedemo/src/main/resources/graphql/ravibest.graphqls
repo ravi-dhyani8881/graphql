@@ -21,7 +21,6 @@ units_in_stock: String
 units_on_order: String
 recorder_level: String
 discontinued: String
-}
 
     findravime2ByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ravime2Response
 

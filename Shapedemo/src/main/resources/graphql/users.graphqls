@@ -25,7 +25,6 @@ password: String
 phoneNumber: String
 userActivationKey: String
 userStatus: String
-}
 
 
 }

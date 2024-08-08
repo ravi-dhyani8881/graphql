@@ -18,7 +18,6 @@ apiKey: String
 lastUpdate: String
 addedDate: String
 status: String
-}
 
 
 }
