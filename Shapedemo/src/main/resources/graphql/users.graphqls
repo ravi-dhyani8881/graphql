@@ -10,22 +10,22 @@ type usersResponse {
   advanced: [Advanced]
   records: [Recordsusers]
 }
-  
+     
 type Recordsusers {
-ID: string
-apiKey: string
-birthday: string
-email: string
-emailAddress: string
-firstName: string
-gender: string
-lastName: string
-middleName: string
-password: string
-phoneNumber: string
-userActivationKey: string
-userStatus: string
-
+ID: String
+apiKey: String
+birthday: String
+email: String
+emailAddress: String
+firstName: String
+gender: String
+lastName: String
+middleName: String
+password: String
+phoneNumber: String
+userActivationKey: String
+userStatus: String
+}
 
 
 }

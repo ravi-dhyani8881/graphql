@@ -10,15 +10,15 @@ type apiKeyResponse {
   advanced: [Advanced]
   records: [RecordsapiKey]
 }
-  
+     
 type RecordsapiKey {
-ID: string
-userId: string
-apiKey: string
-lastUpdate: string
-addedDate: string
-status: string
-
+ID: String
+userId: String
+apiKey: String
+lastUpdate: String
+addedDate: String
+status: String
+}
 
 
 }
