@@ -1,0 +1,25 @@
+extend type Query {
+ findcapsuleByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): capsuleResponse
+}
+
+type capsuleResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordscapsule]
+}
+     
+type Recordscapsule {
+id: UUID
+serial: VARCHAR
+status: VARCHAR
+dragon: UUID
+reuse_count: Integer
+water_landings: Integer
+land_landings: Integer
+last_update: VARCHAR
+
+
+}

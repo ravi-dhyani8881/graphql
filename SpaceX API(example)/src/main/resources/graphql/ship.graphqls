@@ -1,0 +1,38 @@
+extend type Query {
+ findshipByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): shipResponse
+}
+
+type shipResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsship]
+}
+     
+type Recordsship {
+id: UUID
+name: VARCHAR
+model: VARCHAR
+type: VARCHAR
+roles: VARCHAR[]
+active: BOOLEAN
+imo: Integer
+mmsi: Integer
+abs: Integer
+class: Integer
+mass_kg: FLOAT
+mass_lbs: FLOAT
+year_built: Integer
+home_port: VARCHAR
+status: VARCHAR
+speed_kn: FLOAT
+course_deg: FLOAT
+latitude: FLOAT
+longitude: FLOAT
+link: VARCHAR
+image: VARCHAR
+
+
+}

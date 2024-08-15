@@ -1,0 +1,47 @@
+extend type Query {
+ findpayloadByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): payloadResponse
+}
+
+type payloadResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordspayload]
+}
+     
+type Recordspayload {
+id: UUID
+name: VARCHAR
+type: VARCHAR
+reused: BOOLEAN
+customers: VARCHAR[]
+norad_ids: INT[]
+nationality: VARCHAR
+manufacturer: VARCHAR
+mass_kg: FLOAT
+mass_lbs: FLOAT
+orbit: VARCHAR
+reference_system: VARCHAR
+regime: VARCHAR
+longitude: FLOAT
+semi_major_axis_km: FLOAT
+eccentricity: FLOAT
+periapsis_km: FLOAT
+apoapsis_km: FLOAT
+inclination_deg: FLOAT
+period_min: FLOAT
+lifespan_years: Integer
+epoch: DATETIME
+mean_motion: FLOAT
+raan: FLOAT
+arg_of_pericenter: FLOAT
+mean_anomaly: FLOAT
+mass_returned_kg: FLOAT
+mass_returned_lbs: FLOAT
+flight_time_sec: Integer
+manifest: VARCHAR
+
+
+}

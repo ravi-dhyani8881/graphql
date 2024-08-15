@@ -1,0 +1,29 @@
+extend type Query {
+ findlandpadByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): landpadResponse
+}
+
+type landpadResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordslandpad]
+}
+     
+type Recordslandpad {
+id: UUID
+name: VARCHAR
+full_name: VARCHAR
+status: VARCHAR
+type: VARCHAR
+locality: VARCHAR
+region: VARCHAR
+latitude: FLOAT
+longitude: FLOAT
+attempted_landings: Integer
+successful_landings: Integer
+details: VARCHAR
+
+
+}

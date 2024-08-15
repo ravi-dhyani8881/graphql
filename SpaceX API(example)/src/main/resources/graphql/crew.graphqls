@@ -1,0 +1,18 @@
+extend type Query {
+ findcrewByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): crewResponse
+}
+
+type crewResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordscrew]
+}
+     
+type Recordscrew {
+id: UUID
+
+
+}
