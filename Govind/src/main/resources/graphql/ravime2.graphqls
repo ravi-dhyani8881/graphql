@@ -1,0 +1,22 @@
+extend type Query {
+ findravime2ByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ravime2Response
+}
+
+type ravime2Response {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsravime2]
+}
+     
+type Recordsravime2 {
+order_id: String
+product_id: String
+unit_price: String
+quantity: String
+discount: String
+
+
+}
