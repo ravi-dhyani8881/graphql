@@ -97,7 +97,7 @@ jobs:
     - name: List Docker images for debugging
       run: docker images
 
-    - name: Tag Docker image
+    - name: 🏷️ Tag Docker image
       run: |
         projectName=$(jq -r '.projectName' event_payload.json)
         organizationID=$(jq -r '.organizationID' event_payload.json)
@@ -105,14 +105,15 @@ jobs:
         enviromentID=$(jq -r '.enviromentID' event_payload.json)
         graphID=$(jq -r '.graphID' event_payload.json)
         version=$(jq -r '.version' event_payload.json)
-
-        # Convert values to lowercase & sanitize (optional)
+    
         image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID} | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
-
-         # Define full image name with version tag
         full_image_name="ravi8881/${image_name}:${version}"
-        docker tag $full_image_name
+    
+        echo "✅ Tagging image as: $full_image_name and latest"
         
+        # Tag current image as latest
+        docker tag "$full_image_name" "ravi8881/${image_name}:latest"
+            
 
     - name: Push Docker image
       run: |
