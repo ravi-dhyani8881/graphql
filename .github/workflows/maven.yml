@@ -72,7 +72,7 @@ jobs:
         image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID} | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
 
          # Define full image name with version tag
-        full_image_name="ravip8881/${image_name}:${version}"
+        full_image_name="ravi8881/${image_name}:${version}"
         
         JAR_PATH="/home/runner/work/graphql/graphql/$projectName/target"
         JAR_NAME=$(basename $JAR_PATH/*.jar)
@@ -110,7 +110,7 @@ jobs:
         image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID} | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
 
          # Define full image name with version tag
-        full_image_name="ravip8881/${image_name}:${version}"
+        full_image_name="ravi8881/${image_name}:${version}"
 
     
         docker push $full_image_name 
