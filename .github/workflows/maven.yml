@@ -99,36 +99,35 @@ jobs:
 
     - name: 🏷️ Tag Docker image
       run: |
-        projectName=$(jq -r '.projectName' event_payload.json)
         organizationID=$(jq -r '.organizationID' event_payload.json)
         subOrganizationID=$(jq -r '.subOrganizationID' event_payload.json)
         enviromentID=$(jq -r '.enviromentID' event_payload.json)
         graphID=$(jq -r '.graphID' event_payload.json)
         version=$(jq -r '.version' event_payload.json)
     
-        image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID} | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
+        # Append -graph to image name
+        image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID}-graph | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
         full_image_name="ravi8881/${image_name}:${version}"
     
-        echo "✅ Tagging image as: $full_image_name and latest"
-        
-        # Tag current image as latest
+        echo "✅ Tagging image as: $full_image_name and :latest"
+    
+        # Tag current versioned image
         docker tag "$full_image_name" "ravi8881/${image_name}:latest"
+
             
 
-    - name: Push Docker image
+    - name: 🚀 Push Docker image
       run: |
-        projectName=$(jq -r '.projectName' event_payload.json)
         organizationID=$(jq -r '.organizationID' event_payload.json)
         subOrganizationID=$(jq -r '.subOrganizationID' event_payload.json)
         enviromentID=$(jq -r '.enviromentID' event_payload.json)
         graphID=$(jq -r '.graphID' event_payload.json)
         version=$(jq -r '.version' event_payload.json)
-
-        # Convert values to lowercase & sanitize (optional)
-        image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID} | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
-
-         # Define full image name with version tag
-        full_image_name="ravi8881/${image_name}:${version}"
-
     
-        docker push $full_image_name 
+        image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID}-graph | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
+        full_image_name="ravi8881/${image_name}:${version}"
+    
+        echo "📤 Pushing: $full_image_name and :latest"
+    
+        docker push "$full_image_name"
+        docker push "ravi8881/${image_name}:latest"
