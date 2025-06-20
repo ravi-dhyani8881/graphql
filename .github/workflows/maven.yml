@@ -58,16 +58,19 @@ jobs:
       working-directory: ${{ env.PROJECT_PAYLOAD }}
 
 
-    - name: 🐳 Build Docker image with dynamic JAR
+    - name: 🐳 Prepare JAR and build Docker image
       run: |
         PROJECT_NAME=$(jq -r '.projectName' event_payload.json)
         JAR_PATH="/home/runner/work/graphql/graphql/$PROJECT_NAME/target"
+        JAR_NAME=$(basename $JAR_PATH/*.jar)
 
-        echo "📦 Building Docker image from: $JAR_PATH"
+        echo "📦 Copying $JAR_NAME to local ./target/ directory"
 
-        cp "$JAR_PATH"/*.jar ./target/  # ensure Dockerfile can access it
-          
+        mkdir -p target
+        cp "$JAR_PATH/$JAR_NAME" "./target/"
+
         docker build -t ravi8881/$PROJECT_NAME:latest .
+
 
 
     - name: Set up Docker Buildx
