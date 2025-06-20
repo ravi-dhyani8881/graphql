@@ -1,18 +1,11 @@
-# Use an official base image
-FROM openjdk:11-jdk-slim
+FROM eclipse-temurin:17-jre-alpine
 
-# Install jq (JSON processor)
-RUN apt-get update && apt-get install -y jq && apt-get install -y nano
-
-# Set the working directory
 WORKDIR /app
 
-# Copy the JSON file and the script into the container
-COPY config.json /app/config.json
-COPY read_json.sh /app/read_json.sh
+# Copy the built JAR into the image
+# The actual JAR name will be passed dynamically
+COPY target/*.jar app.jar
 
-# Make sure the script is executable
-RUN chmod +x /app/read_json.sh
+EXPOSE 8081
 
-# Define the command to run the script
-CMD ["/app/read_json.sh"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
