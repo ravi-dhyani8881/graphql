@@ -60,7 +60,7 @@ jobs:
 
     - name: 🐳 Build Docker image with dynamic JAR
       run: |
-        PROJECT_NAME=$(jq -r '.data.projectName' event_payload.json)
+        PROJECT_NAME=$(jq -r '.projectName' event_payload.json)
         JAR_PATH="/home/runner/work/graphql/graphql/$PROJECT_NAME/target"
 
         echo "📦 Building Docker image from: $JAR_PATH"
