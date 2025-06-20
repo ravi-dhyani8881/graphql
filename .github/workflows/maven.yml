@@ -57,6 +57,19 @@ jobs:
       run: mvn clean install
       working-directory: ${{ env.PROJECT_PAYLOAD }}
 
+
+    - name: 🐳 Build Docker image with dynamic JAR
+      run: |
+        PROJECT_NAME=$(jq -r '.data.projectName' event_payload.json)
+        JAR_PATH="/home/runner/work/graphql/graphql/$PROJECT_NAME/target"
+
+        echo "📦 Building Docker image from: $JAR_PATH"
+
+        cp "$JAR_PATH"/*.jar ./target/  # ensure Dockerfile can access it
+          
+        docker build -t ravi8881/$PROJECT_NAME:latest .
+
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
