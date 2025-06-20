@@ -69,7 +69,7 @@ jobs:
         version=$(jq -r '.version' event_payload.json)
 
         # Convert values to lowercase & sanitize (optional)
-        image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID} | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
+        image_name="$(echo ${organizationID}-${subOrganizationID}-${enviromentID}-${graphID}-graph  | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
 
          # Define full image name with version tag
         full_image_name="ravi8881/${image_name}:${version}"
