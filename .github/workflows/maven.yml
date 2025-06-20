@@ -74,7 +74,7 @@ jobs:
          # Define full image name with version tag
         full_image_name="ravi8881/${image_name}:${version}"
         
-        JAR_PATH="/home/runner/work/graphql/graphql/$PROJECT_NAME/target"
+        JAR_PATH="/home/runner/work/graphql/graphql/$projectName/target"
         JAR_NAME=$(basename $JAR_PATH/*.jar)
 
         echo "📦 Copying $JAR_NAME to local ./target/ directory"
