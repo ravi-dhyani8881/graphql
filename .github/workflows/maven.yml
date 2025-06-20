@@ -82,7 +82,7 @@ jobs:
         mkdir -p target
         cp "$JAR_PATH/$JAR_NAME" "./target/"
 
-        docker build -t ravi8881/$full_image_name .
+        docker build -t $full_image_name .
 
 
     - name: Set up Docker Buildx
