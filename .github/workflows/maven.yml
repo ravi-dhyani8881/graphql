@@ -60,7 +60,19 @@ jobs:
 
     - name: 🐳 Prepare JAR and build Docker image
       run: |
-        PROJECT_NAME=$(jq -r '.projectName' event_payload.json)
+
+        PROJECT_NAME=$(jq -r '.organizationID' event_payload.json)
+        subOrganizationID=$(jq -r '.subOrganizationID' event_payload.json)
+        enviromentID=$(jq -r '.enviromentID' event_payload.json)
+        graphID=$(jq -r '.graphID' event_payload.json)
+        version=$(jq -r '.version' event_payload.json)
+
+        # Convert values to lowercase & sanitize (optional)
+        image_name="$(echo ${projectName}-${subOrganizationID}-${enviromentID}-${graphID} | tr '[:upper:]' '[:lower:]' | tr -d ' ' | tr '/' '-')"
+
+         # Define full image name with version tag
+        full_image_name="ravi8881/${image_name}:${version}"
+        
         JAR_PATH="/home/runner/work/graphql/graphql/$PROJECT_NAME/target"
         JAR_NAME=$(basename $JAR_PATH/*.jar)
 
@@ -69,8 +81,7 @@ jobs:
         mkdir -p target
         cp "$JAR_PATH/$JAR_NAME" "./target/"
 
-        docker build -t ravi8881/$PROJECT_NAME:latest .
-
+        docker build -t ravi8881/$full_image_name .
 
 
     - name: Set up Docker Buildx
