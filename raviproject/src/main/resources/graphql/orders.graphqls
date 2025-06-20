@@ -1,0 +1,27 @@
+extend type Query {
+ findordersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ordersResponse
+}
+
+type ordersResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsorders]
+}
+     
+type Recordsorders {
+id: String
+ship_via: String
+freight: String
+ship_name: String
+ship_address: String
+ship_city: String
+ship_region: String
+ship_postal_code: String
+ship_country: String
+
+    findravime2ByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ravime2Response
+
+}
