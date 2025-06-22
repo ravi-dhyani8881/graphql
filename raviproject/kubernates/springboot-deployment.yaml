@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: your-dockerhub-username/your-app-name:latest
+        image: ravi8881/ravi-ravisuborg-ravidevenv-ravigraphid2-graph:8.0.0
         ports:
         - containerPort: 8081
