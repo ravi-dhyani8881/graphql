@@ -17,18 +17,18 @@ public class GenericQueryResolver {
 	@Autowired
 	RestTemplate restTemplate;
 		
-			public contentResponseTemplate  findcontentByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
+			public content2ResponseTemplate  findcontent2ByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
 			String url="http://rating-app:8081/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<contentResponseTemplate> responseType =
-	                new ParameterizedTypeReference<contentResponseTemplate>() {};
+		    ParameterizedTypeReference<content2ResponseTemplate> responseType =
+	                new ParameterizedTypeReference<content2ResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (contentResponseTemplate) response2;
+			return (content2ResponseTemplate) response2;
 		}
 			public ravime2ResponseTemplate  findravime2ByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
 				
