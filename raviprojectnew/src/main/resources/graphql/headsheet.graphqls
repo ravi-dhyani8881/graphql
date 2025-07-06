@@ -1,0 +1,21 @@
+extend type Query {
+ findheadsheetByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): headsheetResponse
+}
+
+type headsheetResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsheadsheet]
+}
+     
+type Recordsheadsheet {
+id: String
+customer_id: String
+ship_country: String
+
+    findravime2ByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ravime2Response
+
+}
