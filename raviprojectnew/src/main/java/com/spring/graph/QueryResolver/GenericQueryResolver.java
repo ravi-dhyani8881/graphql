@@ -23,7 +23,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rating-app:8081/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<content2ResponseTemplate> responseType =
 	                new ParameterizedTypeReference<content2ResponseTemplate>() {};
 
@@ -36,7 +36,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rating-app:8081/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<ravime2ResponseTemplate> responseType =
 	                new ParameterizedTypeReference<ravime2ResponseTemplate>() {};
 
@@ -49,7 +49,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rating-app:8081/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<ordersResponseTemplate> responseType =
 	                new ParameterizedTypeReference<ordersResponseTemplate>() {};
 
@@ -62,7 +62,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rating-app:8081/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<headsheetResponseTemplate> responseType =
 	                new ParameterizedTypeReference<headsheetResponseTemplate>() {};
 
@@ -75,7 +75,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rating-app:8081/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<apiKeyResponseTemplate> responseType =
 	                new ParameterizedTypeReference<apiKeyResponseTemplate>() {};
 
@@ -88,7 +88,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rating-app:8081/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<usersResponseTemplate> responseType =
 	                new ParameterizedTypeReference<usersResponseTemplate>() {};
 
