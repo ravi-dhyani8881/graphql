@@ -108,4 +108,17 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (publishRestResponseTemplate) response2;
 		}
+			public apiKeyResponseTemplate  findapiKeyByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+		    
+			String url="http://springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+field+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<apiKeyResponseTemplate> responseType =
+	                new ParameterizedTypeReference<apiKeyResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (apiKeyResponseTemplate) response2;
+		}
 }
