@@ -12,7 +12,7 @@ type graphResponse {
 }
      
 type Recordsgraph {
-ID: Int
+ID: String
 graphName: String
 orgID: String
 subOrgID: String

@@ -12,7 +12,7 @@ type publishRestResponse {
 }
      
 type RecordspublishRest {
-ID: Int
+ID: String
 orgID: String
 subOrgID: String
 envId: String

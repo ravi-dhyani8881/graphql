@@ -12,7 +12,7 @@ type publishGraphResponse {
 }
      
 type RecordspublishGraph {
-ID: Int
+ID: String
 orgID: String
 subOrgID: String
 envId: String

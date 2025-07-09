@@ -12,7 +12,7 @@ type environmentResponse {
 }
      
 type Recordsenvironment {
-ID: Int
+ID: String
 orgID: String
 subOrgID: String
 enviromentName: String

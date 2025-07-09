@@ -12,7 +12,7 @@ type organizationResponse {
 }
      
 type Recordsorganization {
-ID: Int
+ID: String
 orgName: String
 orgDesc: String
 
