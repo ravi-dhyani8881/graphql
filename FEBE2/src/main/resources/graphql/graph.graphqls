@@ -12,12 +12,12 @@ type graphResponse {
 }
      
 type Recordsgraph {
-ID: INTEGER
-graphName: VARCHAR
-orgID: VARCHAR
-subOrgID: VARCHAR
-envId: VARCHAR
-graph_json: VARCHAR
+ID: Int
+graphName: String
+orgID: String
+subOrgID: String
+envId: String
+graph_json: String
 
     findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): organizationResponse
     findenvironmentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): environmentResponse

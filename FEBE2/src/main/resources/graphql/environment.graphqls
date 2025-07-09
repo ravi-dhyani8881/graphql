@@ -12,11 +12,11 @@ type environmentResponse {
 }
      
 type Recordsenvironment {
-ID: INTEGER
-orgID: VARCHAR
-subOrgID: VARCHAR
-enviromentName: VARCHAR
-enviromentDesc: VARCHAR
+ID: Int
+orgID: String
+subOrgID: String
+enviromentName: String
+enviromentDesc: String
 
     findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): subOrganizationResponse
     findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): organizationResponse

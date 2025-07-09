@@ -12,9 +12,9 @@ type organizationResponse {
 }
      
 type Recordsorganization {
-ID: INTEGER
-orgName: VARCHAR
-orgDesc: VARCHAR
+ID: Int
+orgName: String
+orgDesc: String
 
     finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): userResponse
     findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): subOrganizationResponse

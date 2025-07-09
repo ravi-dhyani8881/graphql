@@ -12,14 +12,14 @@ type publishRestResponse {
 }
      
 type RecordspublishRest {
-ID: INTEGER
-orgID: VARCHAR
-subOrgID: VARCHAR
-envId: VARCHAR
-userId: VARCHAR
-publish_rest_json: VARCHAR
-publish_type: VARCHAR
-version: VARCHAR
+ID: Int
+orgID: String
+subOrgID: String
+envId: String
+userId: String
+publish_rest_json: String
+publish_type: String
+version: String
 
     findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): subOrganizationResponse
     findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): organizationResponse

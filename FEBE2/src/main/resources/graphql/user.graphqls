@@ -12,12 +12,12 @@ type userResponse {
 }
      
 type Recordsuser {
-ID: INTEGER
-Name: VARCHAR
-address: VARCHAR
-password: VARCHAR
+ID: Int
+Name: String
+address: String
+password: String
 dateOfBirth: DateTime
-orgID: VARCHAR
+orgID: String
 
     findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): organizationResponse
     findpublishRestByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): publishRestResponse
