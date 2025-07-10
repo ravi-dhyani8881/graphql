@@ -13,10 +13,17 @@ spec:
     - host: picked-apt-wombat.ngrok-free.app
       http:
         paths:
-          - path: /graphiql
-            pathType: Prefix
-            backend:
+          - backend:
               service:
-                name: springboot-service
+                name: springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f
                 port:
                   number: 80
+            path: /graphiql
+            pathType: Prefix
+          - backend:
+              service:
+                name: springboot-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f
+                port:
+                  number: 80
+            path: /graphql
+            pathType: Prefix
