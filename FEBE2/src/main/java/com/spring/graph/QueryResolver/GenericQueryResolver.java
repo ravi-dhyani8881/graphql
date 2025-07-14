@@ -121,6 +121,45 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (apiKeyResponseTemplate) response2;
 		}
+			public userSettingResponseTemplate  finduserSettingByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+		    
+			String url="http://rest-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+toPascalCase(field)+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<userSettingResponseTemplate> responseType =
+	                new ParameterizedTypeReference<userSettingResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (userSettingResponseTemplate) response2;
+		}
+			public graphStatusResponseTemplate  findgraphStatusByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+		    
+			String url="http://rest-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+toPascalCase(field)+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<graphStatusResponseTemplate> responseType =
+	                new ParameterizedTypeReference<graphStatusResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (graphStatusResponseTemplate) response2;
+		}
+			public graphDeploymentStatusResponseTemplate  findgraphDeploymentStatusByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+		    
+			String url="http://rest-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+toPascalCase(field)+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<graphDeploymentStatusResponseTemplate> responseType =
+	                new ParameterizedTypeReference<graphDeploymentStatusResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (graphDeploymentStatusResponseTemplate) response2;
+		}
 
 		public static String toPascalCase(String input) {
 			    String[] parts = input.split("_");

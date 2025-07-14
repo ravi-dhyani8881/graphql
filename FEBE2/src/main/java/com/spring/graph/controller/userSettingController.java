@@ -7,31 +7,47 @@ import org.springframework.stereotype.Controller;
 
 import com.spring.graph.utils.QueryUtils;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
-import com.spring.graph.QueryResolver.graphResponseTemplate;
+import com.spring.graph.QueryResolver.userSettingResponseTemplate;
 import com.spring.graph.QueryResolver.GenericQueryResolver;
-import com.spring.graph.Model.Recordsgraph;
+import com.spring.graph.Model.RecordsuserSetting;
+  import com.spring.graph.QueryResolver.userResponseTemplate;
   import com.spring.graph.QueryResolver.organizationResponseTemplate;
-  import com.spring.graph.QueryResolver.environmentResponseTemplate;
   import com.spring.graph.QueryResolver.subOrganizationResponseTemplate;
-  import com.spring.graph.QueryResolver.graphStatusResponseTemplate;
-  import com.spring.graph.QueryResolver.graphDeploymentStatusResponseTemplate;
+  import com.spring.graph.QueryResolver.environmentResponseTemplate;
 
 
 @Controller
-public class graphController {
+public class userSettingController {
 
 	@Autowired
 	GenericQueryResolver genericQueryResolver;
 	
 	@QueryMapping
-    public graphResponseTemplate findgraphByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
+    public userSettingResponseTemplate finduserSettingByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
     							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance,@Argument String field ) {
-		return  genericQueryResolver.findgraphByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);	
+		return  genericQueryResolver.finduserSettingByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);	
     }
 	  
   @SchemaMapping
+  public userResponseTemplate finduserByQuery(
+    RecordsuserSetting content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument String filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance,
+    @Argument String field
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.finduserByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+  }
+  @SchemaMapping
   public organizationResponseTemplate findorganizationByQuery(
-    Recordsgraph content,
+    RecordsuserSetting content,
     @Argument String query,
     @Argument String start,
     @Argument String rows,
@@ -47,25 +63,8 @@ public class graphController {
     return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
   @SchemaMapping
-  public environmentResponseTemplate findenvironmentByQuery(
-    Recordsgraph content,
-    @Argument String query,
-    @Argument String start,
-    @Argument String rows,
-    @Argument String filterField,
-    @Argument String filterQuery,
-    @Argument String sort,
-    @Argument String advanceField,
-    @Argument String advanceQuery,
-    @Argument String advance,
-    @Argument String field
-  ) throws Exception {
-    String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findenvironmentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
-  }
-  @SchemaMapping
   public subOrganizationResponseTemplate findsubOrganizationByQuery(
-    Recordsgraph content,
+    RecordsuserSetting content,
     @Argument String query,
     @Argument String start,
     @Argument String rows,
@@ -81,8 +80,8 @@ public class graphController {
     return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
   @SchemaMapping
-  public graphStatusResponseTemplate findgraphStatusByQuery(
-    Recordsgraph content,
+  public environmentResponseTemplate findenvironmentByQuery(
+    RecordsuserSetting content,
     @Argument String query,
     @Argument String start,
     @Argument String rows,
@@ -95,24 +94,7 @@ public class graphController {
     @Argument String field
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphStatusByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
-  }
-  @SchemaMapping
-  public graphDeploymentStatusResponseTemplate findgraphDeploymentStatusByQuery(
-    Recordsgraph content,
-    @Argument String query,
-    @Argument String start,
-    @Argument String rows,
-    @Argument String filterField,
-    @Argument String filterQuery,
-    @Argument String sort,
-    @Argument String advanceField,
-    @Argument String advanceQuery,
-    @Argument String advance,
-    @Argument String field
-  ) throws Exception {
-    String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphDeploymentStatusByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findenvironmentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
 
 
