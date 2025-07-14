@@ -1,0 +1,23 @@
+extend type Query {
+ findgraphStatusByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): graphStatusResponse
+}
+
+type graphStatusResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsgraphStatus]
+}
+     
+type RecordsgraphStatus {
+ID: String
+graphID: String
+version: String
+deployedStatus: String
+publishStatus: String
+
+    findgraphByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): graphResponse
+    findgraphDeploymentStatusByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): graphDeploymentStatusResponse
+}
