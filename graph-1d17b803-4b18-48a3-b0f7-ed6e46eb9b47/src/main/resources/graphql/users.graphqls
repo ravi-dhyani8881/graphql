@@ -1,0 +1,21 @@
+extend type Query {
+ findusersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): usersResponse
+}
+
+type usersResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsusers]
+}
+     
+type Recordsusers {
+id: String
+username: String
+password: String
+salt: String
+
+    findprofilesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): profilesResponse
+}
