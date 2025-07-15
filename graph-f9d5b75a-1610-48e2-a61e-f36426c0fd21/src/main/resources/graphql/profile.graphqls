@@ -1,0 +1,20 @@
+extend type Query {
+ findprofileByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): profileResponse
+}
+
+type profileResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsprofile]
+}
+     
+type Recordsprofile {
+id: String
+email: String
+address: String
+userId: String
+
+}
