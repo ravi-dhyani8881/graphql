@@ -13,8 +13,8 @@ import com.spring.graph.Model.Recordsgraph;
   import com.spring.graph.QueryResolver.organizationResponseTemplate;
   import com.spring.graph.QueryResolver.environmentResponseTemplate;
   import com.spring.graph.QueryResolver.subOrganizationResponseTemplate;
-  import com.spring.graph.QueryResolver.graphStatusResponseTemplate;
-  import com.spring.graph.QueryResolver.graphDeploymentStatusResponseTemplate;
+  import com.spring.graph.QueryResolver.graph_versionsResponseTemplate;
+  import com.spring.graph.QueryResolver.graphDeploymentsResponseTemplate;
 
 
 @Controller
@@ -81,7 +81,7 @@ public class graphController {
     return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
   @SchemaMapping
-  public graphStatusResponseTemplate findgraphStatusByQuery(
+  public graph_versionsResponseTemplate findgraph_versionsByQuery(
     Recordsgraph content,
     @Argument String query,
     @Argument String start,
@@ -95,10 +95,10 @@ public class graphController {
     @Argument String field
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphStatusByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findgraph_versionsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
   @SchemaMapping
-  public graphDeploymentStatusResponseTemplate findgraphDeploymentStatusByQuery(
+  public graphDeploymentsResponseTemplate findgraphDeploymentsByQuery(
     Recordsgraph content,
     @Argument String query,
     @Argument String start,
@@ -112,7 +112,7 @@ public class graphController {
     @Argument String field
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphDeploymentStatusByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findgraphDeploymentsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
 
 
