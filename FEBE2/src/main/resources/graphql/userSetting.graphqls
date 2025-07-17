@@ -1,0 +1,25 @@
+extend type Query {
+ finduserSettingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): userSettingResponse
+}
+
+type userSettingResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsuserSetting]
+}
+     
+type RecordsuserSetting {
+ID: String
+orgID: String
+SubOrgId: String
+envId: String
+userId: String
+
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): userResponse
+    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): organizationResponse
+    findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): subOrganizationResponse
+    findenvironmentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): environmentResponse
+}

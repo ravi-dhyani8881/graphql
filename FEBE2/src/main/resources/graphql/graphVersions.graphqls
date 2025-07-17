@@ -1,0 +1,29 @@
+extend type Query {
+ findgraphVersionsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): graphVersionsResponse
+}
+
+type graphVersionsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsgraphVersions]
+}
+     
+type RecordsgraphVersions {
+id: String
+graphId: String
+graphVersion: String
+graphJson: String
+isSaved: String
+isPublished: String
+isDeployed: String
+createdAt: String
+updatedAt: String
+createdBy: String
+notes: String
+
+    findgraphByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): graphResponse
+    findgraphDeploymentsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): graphDeploymentsResponse
+}
