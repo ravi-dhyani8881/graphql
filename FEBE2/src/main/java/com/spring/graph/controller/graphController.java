@@ -13,7 +13,7 @@ import com.spring.graph.Model.Recordsgraph;
   import com.spring.graph.QueryResolver.organizationResponseTemplate;
   import com.spring.graph.QueryResolver.environmentResponseTemplate;
   import com.spring.graph.QueryResolver.subOrganizationResponseTemplate;
-  import com.spring.graph.QueryResolver.graph_versionsResponseTemplate;
+  import com.spring.graph.QueryResolver.graphVersionsResponseTemplate;
   import com.spring.graph.QueryResolver.graphDeploymentsResponseTemplate;
 
 
@@ -81,7 +81,7 @@ public class graphController {
     return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
   @SchemaMapping
-  public graph_versionsResponseTemplate findgraph_versionsByQuery(
+  public graphVersionsResponseTemplate findgraphVersionsByQuery(
     Recordsgraph content,
     @Argument String query,
     @Argument String start,
@@ -95,7 +95,7 @@ public class graphController {
     @Argument String field
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraph_versionsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findgraphVersionsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
   }
   @SchemaMapping
   public graphDeploymentsResponseTemplate findgraphDeploymentsByQuery(

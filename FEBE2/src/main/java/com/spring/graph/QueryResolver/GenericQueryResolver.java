@@ -147,18 +147,18 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (ConfigurationResponseTemplate) response2;
 		}
-			public graph_versionsResponseTemplate  findgraph_versionsByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
+			public graphVersionsResponseTemplate  findgraphVersionsByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
 			String url="http://rest-service-9dd0c8bf-0a27-4293-9442-db5b86a7c07f:80/"+toPascalCase(field)+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort"+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<graph_versionsResponseTemplate> responseType =
-	                new ParameterizedTypeReference<graph_versionsResponseTemplate>() {};
+		    ParameterizedTypeReference<graphVersionsResponseTemplate> responseType =
+	                new ParameterizedTypeReference<graphVersionsResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (graph_versionsResponseTemplate) response2;
+			return (graphVersionsResponseTemplate) response2;
 		}
 			public graphDeploymentsResponseTemplate  findgraphDeploymentsByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String field) {	
 				
