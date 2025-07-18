@@ -22,8 +22,8 @@ public class graphVersionsController {
 	
 	@QueryMapping
     public graphVersionsResponseTemplate findgraphVersionsByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance,@Argument String field ) {
-		return  genericQueryResolver.findgraphVersionsByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
+		return  genericQueryResolver.findgraphVersionsByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
     }
 	  
   @SchemaMapping
@@ -38,10 +38,10 @@ public class graphVersionsController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findgraphByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
   @SchemaMapping
   public graphDeploymentsResponseTemplate findgraphDeploymentsByQuery(
@@ -55,10 +55,10 @@ public class graphVersionsController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphDeploymentsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findgraphDeploymentsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
 
 

@@ -25,8 +25,8 @@ public class graphController {
 	
 	@QueryMapping
     public graphResponseTemplate findgraphByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance,@Argument String field ) {
-		return  genericQueryResolver.findgraphByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
+		return  genericQueryResolver.findgraphByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
     }
 	  
   @SchemaMapping
@@ -41,10 +41,10 @@ public class graphController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
   @SchemaMapping
   public environmentResponseTemplate findenvironmentByQuery(
@@ -58,10 +58,10 @@ public class graphController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findenvironmentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findenvironmentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
   @SchemaMapping
   public subOrganizationResponseTemplate findsubOrganizationByQuery(
@@ -75,10 +75,10 @@ public class graphController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
   @SchemaMapping
   public graphVersionsResponseTemplate findgraphVersionsByQuery(
@@ -92,10 +92,10 @@ public class graphController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphVersionsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findgraphVersionsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
   @SchemaMapping
   public graphDeploymentsResponseTemplate findgraphDeploymentsByQuery(
@@ -109,10 +109,10 @@ public class graphController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findgraphDeploymentsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findgraphDeploymentsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
 
 

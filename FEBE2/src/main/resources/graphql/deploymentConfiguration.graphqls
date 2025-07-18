@@ -1,5 +1,5 @@
 extend type Query {
- finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): deploymentConfigurationResponse
+ finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): deploymentConfigurationResponse
 }
 
 type deploymentConfigurationResponse {
@@ -15,6 +15,6 @@ type RecordsdeploymentConfiguration {
 ID: String
 configurationID: String
 
-    findConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): ConfigurationResponse
-    findgraphDeploymentsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String, field: String ): graphDeploymentsResponse
+    findConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): ConfigurationResponse
+    findgraphDeploymentsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): graphDeploymentsResponse
 }

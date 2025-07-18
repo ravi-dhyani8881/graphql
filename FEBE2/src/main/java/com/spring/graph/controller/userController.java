@@ -23,8 +23,8 @@ public class userController {
 	
 	@QueryMapping
     public userResponseTemplate finduserByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance,@Argument String field ) {
-		return  genericQueryResolver.finduserByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
+		return  genericQueryResolver.finduserByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
     }
 	  
   @SchemaMapping
@@ -39,10 +39,10 @@ public class userController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
   @SchemaMapping
   public publishRestResponseTemplate findpublishRestByQuery(
@@ -56,10 +56,10 @@ public class userController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findpublishRestByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.findpublishRestByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
   @SchemaMapping
   public userSettingResponseTemplate finduserSettingByQuery(
@@ -73,10 +73,10 @@ public class userController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String field
+    
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.finduserSettingByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);
+    return genericQueryResolver.finduserSettingByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
 
 

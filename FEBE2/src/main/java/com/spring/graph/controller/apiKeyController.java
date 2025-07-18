@@ -20,8 +20,8 @@ public class apiKeyController {
 	
 	@QueryMapping
     public apiKeyResponseTemplate findapiKeyByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance,@Argument String field ) {
-		return  genericQueryResolver.findapiKeyByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, field);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
+		return  genericQueryResolver.findapiKeyByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
     }
 	  
 
