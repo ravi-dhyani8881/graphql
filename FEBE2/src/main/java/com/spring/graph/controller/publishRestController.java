@@ -39,7 +39,7 @@ public class publishRestController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance,
+    @Argument String advance
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
@@ -56,7 +56,7 @@ public class publishRestController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance,
+    @Argument String advance
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
@@ -73,7 +73,7 @@ public class publishRestController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance,
+    @Argument String advance
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
@@ -90,7 +90,7 @@ public class publishRestController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance,
+    @Argument String advance
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
