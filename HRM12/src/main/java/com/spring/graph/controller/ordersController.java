@@ -11,6 +11,7 @@ import com.spring.graph.QueryResolver.ordersResponseTemplate;
 import com.spring.graph.QueryResolver.GenericQueryResolver;
 import com.spring.graph.Model.Recordsorders;
   import com.spring.graph.QueryResolver.usersResponseTemplate;
+  import com.spring.graph.QueryResolver.productsResponseTemplate;
 
 
 @Controller
@@ -41,6 +42,23 @@ public class ordersController {
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
     return genericQueryResolver.findusersByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+  @SchemaMapping
+  public productsResponseTemplate findproductsByQuery(
+    Recordsorders content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument String filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findproductsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
 
 
