@@ -15,6 +15,7 @@ type Recordsorders {
 id: String
 description: String
 userId: String
+quantity: String
 
     findusersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): usersResponse
 }
