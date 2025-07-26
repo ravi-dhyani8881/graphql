@@ -13,5 +13,6 @@ type LocalResponse {
      
 type RecordsLocal {
 id: String
+test: String
 
 }
