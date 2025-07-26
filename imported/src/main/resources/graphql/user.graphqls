@@ -1,0 +1,27 @@
+extend type Query {
+ finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): userResponse
+}
+
+type userResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsuser]
+}
+     
+type Recordsuser {
+ID: String
+Name: String
+address: String
+password: String
+dateOfBirth: String
+orgID: String
+createdAt: String
+updatedAt: String
+
+    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): organizationResponse
+    findpublishRestByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): publishRestResponse
+    finduserSettingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): userSettingResponse
+}
