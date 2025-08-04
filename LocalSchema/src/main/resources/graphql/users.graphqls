@@ -14,5 +14,6 @@ type usersResponse {
 type Recordsusers {
 id: String
 name: String
+email: String
 
 }
