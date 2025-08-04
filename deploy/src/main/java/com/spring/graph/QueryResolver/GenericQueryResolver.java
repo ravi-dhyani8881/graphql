@@ -43,6 +43,19 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (schoolResponseTemplate) response2;
 		}
+			public doorResponseTemplate  finddoorByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+		    
+			String url="http://rest-service-4d9e0c36-1c41-4c84-a74e-7da71d65186f:80/"+toPascalCase("door")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<doorResponseTemplate> responseType =
+	                new ParameterizedTypeReference<doorResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (doorResponseTemplate) response2;
+		}
 
 		public static String toPascalCase(String input) {
 			    String[] parts = input.split("_");

@@ -15,4 +15,5 @@ type Recordslocal {
 ID: String
 
     findschoolByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): schoolResponse
+    finddoorByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): doorResponse
 }
