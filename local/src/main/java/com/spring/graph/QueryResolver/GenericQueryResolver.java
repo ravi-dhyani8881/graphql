@@ -17,18 +17,18 @@ public class GenericQueryResolver {
 	@Autowired
 	RestTemplate restTemplate;
 		
-			public passResponseTemplate  findpassByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public localResponseTemplate  findlocalByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-048bf318-a488-444d-b504-e7444e941314:80/"+toPascalCase("pass")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<passResponseTemplate> responseType =
-	                new ParameterizedTypeReference<passResponseTemplate>() {};
+			String url="http://rest-service-6ec02342-28a0-4437-a3f6-7aba750abcf2:80/"+toPascalCase("local")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<localResponseTemplate> responseType =
+	                new ParameterizedTypeReference<localResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (passResponseTemplate) response2;
+			return (localResponseTemplate) response2;
 		}
 
 		public static String toPascalCase(String input) {
