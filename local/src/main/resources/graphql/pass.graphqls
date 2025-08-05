@@ -1,0 +1,18 @@
+extend type Query {
+ findpassByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): passResponse
+}
+
+type passResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordspass]
+}
+     
+type Recordspass {
+ID§: String
+schema: String
+
+}
