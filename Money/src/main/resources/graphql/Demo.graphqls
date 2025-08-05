@@ -1,0 +1,18 @@
+extend type Query {
+ findDemoByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): DemoResponse
+}
+
+type DemoResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsDemo]
+}
+     
+type RecordsDemo {
+ID: String
+name: String
+
+}
