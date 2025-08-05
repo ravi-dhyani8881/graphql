@@ -15,5 +15,4 @@ type Recordslocal {
 ID: String
 New: String
 
-    finddoorByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): doorResponse
 }
