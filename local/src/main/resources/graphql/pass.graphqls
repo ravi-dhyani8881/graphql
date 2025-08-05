@@ -12,7 +12,7 @@ type passResponse {
 }
      
 type Recordspass {
-ID§: String
+ID: String
 schema: String
 
 }
