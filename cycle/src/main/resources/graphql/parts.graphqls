@@ -1,0 +1,23 @@
+extend type Query {
+ findpartsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): partsResponse
+}
+
+type partsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsparts]
+}
+     
+type Recordsparts {
+ID: String
+cycleId: String
+partsName: String
+createdAt: String
+updatedAt: String
+depname: String
+
+    findcycleByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): cycleResponse
+}
