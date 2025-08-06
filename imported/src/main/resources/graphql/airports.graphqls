@@ -1,0 +1,28 @@
+extend type Query {
+ findairportsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): airportsResponse
+}
+
+type airportsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsairports]
+}
+     
+type Recordsairports {
+ID: String
+name: String
+city: String
+country: String
+iata_code: String
+icao_code: String
+timezone: String
+latitude: String
+longitude: String
+createdAt: String
+updatedAt: String
+
+    findflightsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): flightsResponse
+}
