@@ -1,0 +1,22 @@
+extend type Query {
+ findengineByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): engineResponse
+}
+
+type engineResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsengine]
+}
+     
+type Recordsengine {
+ID: String
+rocketId: String
+updatedAt: String
+createdAt: String
+name: String
+
+    findrocketByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): rocketResponse
+}
