@@ -1,0 +1,22 @@
+extend type Query {
+ finddepartmentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): departmentResponse
+}
+
+type departmentResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsdepartment]
+}
+     
+type Recordsdepartment {
+ID: String
+userId: String
+createdAt: String
+updatedAt: String
+depname: String
+
+    findUserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): UserResponse
+}
