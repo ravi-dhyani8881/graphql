@@ -17,18 +17,31 @@ public class GenericQueryResolver {
 	@Autowired
 	RestTemplate restTemplate;
 		
-			public DemoResponseTemplate  findDemoByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public UserResponseTemplate  findUserByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-34b26c36-1082-47b3-828a-90a41a7031e6:80/"+toPascalCase("Demo")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<DemoResponseTemplate> responseType =
-	                new ParameterizedTypeReference<DemoResponseTemplate>() {};
+			String url="http://rest-service-34b26c36-1082-47b3-828a-90a41a7031e6:80/"+toPascalCase("User")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<UserResponseTemplate> responseType =
+	                new ParameterizedTypeReference<UserResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (DemoResponseTemplate) response2;
+			return (UserResponseTemplate) response2;
+		}
+			public departmentResponseTemplate  finddepartmentByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+		    
+			String url="http://rest-service-34b26c36-1082-47b3-828a-90a41a7031e6:80/"+toPascalCase("department")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<departmentResponseTemplate> responseType =
+	                new ParameterizedTypeReference<departmentResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (departmentResponseTemplate) response2;
 		}
 
 		public static String toPascalCase(String input) {
