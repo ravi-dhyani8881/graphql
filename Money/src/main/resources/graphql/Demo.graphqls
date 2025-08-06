@@ -14,5 +14,7 @@ type DemoResponse {
 type RecordsDemo {
 ID: String
 name: String
+createdAt: String
+updatedAt: String
 
 }
