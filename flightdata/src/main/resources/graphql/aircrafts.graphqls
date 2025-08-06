@@ -1,0 +1,26 @@
+extend type Query {
+ findaircraftsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): aircraftsResponse
+}
+
+type aircraftsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsaircrafts]
+}
+     
+type Recordsaircrafts {
+ID: String
+model: String
+manufacturer: String
+capacity: String
+range_km: String
+airline_id: String
+createdAt: String
+updatedAt: String
+
+    findairlinesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): airlinesResponse
+    findflightsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): flightsResponse
+}

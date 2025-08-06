@@ -1,0 +1,26 @@
+extend type Query {
+ findticketsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): ticketsResponse
+}
+
+type ticketsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordstickets]
+}
+     
+type Recordstickets {
+ID: String
+booking_id: String
+ticket_number: String
+issue_date: String
+price: String
+class: String
+baggage_allowance_kg: String
+createdAt: String
+updatedAt: String
+
+    findbookingsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): bookingsResponse
+}

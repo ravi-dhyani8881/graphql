@@ -1,0 +1,36 @@
+extend type Query {
+ findflightsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): flightsResponse
+}
+
+type flightsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsflights]
+}
+     
+type Recordsflights {
+ID: String
+flight_number: String
+airline_id: String
+aircraft_id: String
+departure_airport_id: String
+arrival_airport_id: String
+scheduled_departure_time: String
+actual_departure_time: String
+scheduled_arrival_time: String
+actual_arrival_time: String
+status: String
+gate: String
+terminal: String
+createdAt: String
+updatedAt: String
+
+    findairlinesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): airlinesResponse
+    findaircraftsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): aircraftsResponse
+    findairportsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): airportsResponse
+    findbookingsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): bookingsResponse
+    findflight_crewByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): flight_crewResponse
+}

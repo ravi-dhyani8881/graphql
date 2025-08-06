@@ -1,0 +1,28 @@
+extend type Query {
+ findcrew_membersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): crew_membersResponse
+}
+
+type crew_membersResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordscrew_members]
+}
+     
+type Recordscrew_members {
+ID: String
+first_name: String
+last_name: String
+employee_id: String
+role: String
+airline_id: String
+date_of_birth: String
+hire_date: String
+createdAt: String
+updatedAt: String
+
+    findairlinesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): airlinesResponse
+    findflight_crewByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): flight_crewResponse
+}
