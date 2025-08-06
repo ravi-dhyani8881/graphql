@@ -1,0 +1,21 @@
+extend type Query {
+ findConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): ConfigurationResponse
+}
+
+type ConfigurationResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsConfiguration]
+}
+     
+type RecordsConfiguration {
+ID: String
+replicaSize: String
+createdAt: String
+updatedAt: String
+
+    finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): deploymentConfigurationResponse
+}
