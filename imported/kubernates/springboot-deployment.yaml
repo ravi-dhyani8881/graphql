@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: ravi8881/3219e62e-f28c-4e9a-b62e-77aae69fb44b-70114ee3-7c51-40a6-af98-bd2ca53150ad-17cd568b-1349-4670-a8ae-53d47334febc-a7a8e80b-ed76-4fc4-b5f2-21e73741e1f4-graph:3.0.0
+        image: ravi8881/3219e62e-f28c-4e9a-b62e-77aae69fb44b-70114ee3-7c51-40a6-af98-bd2ca53150ad-17cd568b-1349-4670-a8ae-53d47334febc-a7a8e80b-ed76-4fc4-b5f2-21e73741e1f4-graph:15.0.0
         ports:
         - containerPort: 8081
