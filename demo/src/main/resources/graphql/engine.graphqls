@@ -19,4 +19,5 @@ createdAt: String
 name: String
 
     findrocketByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): rocketResponse
+    findRaviByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): RaviResponse
 }

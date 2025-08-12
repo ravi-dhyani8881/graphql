@@ -11,6 +11,7 @@ import com.spring.graph.QueryResolver.engineResponseTemplate;
 import com.spring.graph.QueryResolver.GenericQueryResolver;
 import com.spring.graph.Model.Recordsengine;
   import com.spring.graph.QueryResolver.rocketResponseTemplate;
+  import com.spring.graph.QueryResolver.RaviResponseTemplate;
 
 
 @Controller
@@ -41,6 +42,23 @@ public class engineController {
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
     return genericQueryResolver.findrocketByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+  @SchemaMapping
+  public RaviResponseTemplate findRaviByQuery(
+    Recordsengine content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument String filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findRaviByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
   }
 
 

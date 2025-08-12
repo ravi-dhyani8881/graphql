@@ -1,0 +1,19 @@
+extend type Query {
+ findRaviByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): RaviResponse
+}
+
+type RaviResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsRavi]
+}
+     
+type RecordsRavi {
+ID: String
+Name: String
+
+    findengineByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): engineResponse
+}
