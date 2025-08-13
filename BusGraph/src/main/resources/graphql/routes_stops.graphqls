@@ -1,0 +1,20 @@
+extend type Query {
+ findroutes_stopsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): routes_stopsResponse
+}
+
+type routes_stopsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsroutes_stops]
+}
+     
+type Recordsroutes_stops {
+RouteID: String
+StopID: String
+
+    findbus_routesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): bus_routesResponse
+    findstopsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): stopsResponse
+}

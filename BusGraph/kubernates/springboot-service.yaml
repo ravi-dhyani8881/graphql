@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot-service-bb88b8bf-63b3-452e-ad73-c3b849f54995
+  namespace: 3219e62e-f28c-4e9a-b62e-77aae69fb44b
+spec:
+  selector:
+    app: springboot-app-bb88b8bf-63b3-452e-ad73-c3b849f54995
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8082
+  type: ClusterIP
+
