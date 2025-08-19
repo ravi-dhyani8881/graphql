@@ -14,8 +14,8 @@ type bus_routesResponse {
 type Recordsbus_routes {
 RouteID: String
 Name: String
-created_at: String
-updated_at: String
+createdAt: String
+updatedAt: String
 
     findroutes_stopsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): routes_stopsResponse
 }
