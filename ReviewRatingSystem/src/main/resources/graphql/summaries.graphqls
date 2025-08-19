@@ -1,0 +1,22 @@
+extend type Query {
+ findsummariesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): summariesResponse
+}
+
+type summariesResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordssummaries]
+}
+     
+type Recordssummaries {
+ID: String
+transcription_id: String
+summary_text: String
+createdAt: String
+updatedAt: String
+
+    findtranscriptionsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): transcriptionsResponse
+}

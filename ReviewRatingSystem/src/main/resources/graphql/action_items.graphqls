@@ -1,0 +1,23 @@
+extend type Query {
+ findaction_itemsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): action_itemsResponse
+}
+
+type action_itemsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsaction_items]
+}
+     
+type Recordsaction_items {
+ID: String
+transcription_id: String
+description: String
+status: String
+createdAt: String
+updatedAt: String
+
+    findtranscriptionsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): transcriptionsResponse
+}
