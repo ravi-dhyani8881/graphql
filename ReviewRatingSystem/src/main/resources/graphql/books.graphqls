@@ -1,0 +1,23 @@
+extend type Query {
+ findbooksByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): booksResponse
+}
+
+type booksResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsbooks]
+}
+     
+type Recordsbooks {
+ID: String
+title: String
+author: String
+published_date: String
+createdAt: String
+updatedAt: String
+
+    findborrowingsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): borrowingsResponse
+}

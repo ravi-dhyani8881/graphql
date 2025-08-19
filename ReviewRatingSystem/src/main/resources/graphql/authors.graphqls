@@ -1,0 +1,21 @@
+extend type Query {
+ findauthorsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): authorsResponse
+}
+
+type authorsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsauthors]
+}
+     
+type Recordsauthors {
+ID: String
+name: String
+bio: String
+createdAt: String
+updatedAt: String
+
+}
