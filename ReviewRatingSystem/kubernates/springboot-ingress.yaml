@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: 09333660-9208-4d88-8ddd-be3d396aff19.local
+    - host: 361689db-e76a-4488-9064-c6f76898bd66.local
       http:
         paths:
           - backend:
