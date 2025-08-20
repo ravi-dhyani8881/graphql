@@ -3,14 +3,12 @@ kind: Ingress
 metadata:
   name: springboot-ingress-bb88b8bf-63b3-452e-ad73-c3b849f54995
   namespace: 3219e62e-f28c-4e9a-b62e-77aae69fb44b
-  annotations:
-    ngrok.com/ingress-mode: edge
   labels:
     app: springboot-app-bb88b8bf-63b3-452e-ad73-c3b849f54995
 spec:
   ingressClassName: nginx
   rules:
-    - host: picked-apt-wombat.ngrok-free.app
+    - host: 558e97d9-9cce-4d95-8a81-cc2c37995f6a.local
       http:
         paths:
           - backend:
