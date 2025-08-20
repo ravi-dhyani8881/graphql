@@ -1,28 +1,26 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: springboot-ingress-0456e7b5-eb4e-4970-a00d-6d85aecf55be
+  name: springboot-ingress-c6d827ec-9923-4346-9bad-90f2460de007
   namespace: 3219e62e-f28c-4e9a-b62e-77aae69fb44b
-  annotations:
-    ngrok.com/ingress-mode: edge
   labels:
-    app: springboot-app-0456e7b5-eb4e-4970-a00d-6d85aecf55be
+    app: springboot-app-c6d827ec-9923-4346-9bad-90f2460de007
 spec:
   ingressClassName: nginx
   rules:
-    - host: picked-apt-wombat.ngrok-free.app
+    - host: app-os69wq.qpy2m3.us-east-2.febe.k8s
       http:
         paths:
           - backend:
               service:
-                name: springboot-service-0456e7b5-eb4e-4970-a00d-6d85aecf55be
+                name: springboot-service-c6d827ec-9923-4346-9bad-90f2460de007
                 port:
                   number: 80
             path: /graphiql
             pathType: Prefix
           - backend:
               service:
-                name: springboot-service-0456e7b5-eb4e-4970-a00d-6d85aecf55be
+                name: springboot-service-c6d827ec-9923-4346-9bad-90f2460de007
                 port:
                   number: 80
             path: /graphql
