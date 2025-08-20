@@ -23,7 +23,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-9cb7520a-5bea-4d91-a1ed-b7b63feb6a0b:80/"+toPascalCase("transcriptions")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-6dbc7ebc-f3a3-4044-8dd3-4a5f5291a1a6:80/"+toPascalCase("transcriptions")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<transcriptionsResponseTemplate> responseType =
 	                new ParameterizedTypeReference<transcriptionsResponseTemplate>() {};
 
@@ -36,7 +36,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-9cb7520a-5bea-4d91-a1ed-b7b63feb6a0b:80/"+toPascalCase("summaries")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-6dbc7ebc-f3a3-4044-8dd3-4a5f5291a1a6:80/"+toPascalCase("summaries")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<summariesResponseTemplate> responseType =
 	                new ParameterizedTypeReference<summariesResponseTemplate>() {};
 
@@ -49,7 +49,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-9cb7520a-5bea-4d91-a1ed-b7b63feb6a0b:80/"+toPascalCase("action_items")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-6dbc7ebc-f3a3-4044-8dd3-4a5f5291a1a6:80/"+toPascalCase("action_items")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<action_itemsResponseTemplate> responseType =
 	                new ParameterizedTypeReference<action_itemsResponseTemplate>() {};
 
@@ -62,7 +62,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-9cb7520a-5bea-4d91-a1ed-b7b63feb6a0b:80/"+toPascalCase("summarry")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-6dbc7ebc-f3a3-4044-8dd3-4a5f5291a1a6:80/"+toPascalCase("summarry")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<summarryResponseTemplate> responseType =
 	                new ParameterizedTypeReference<summarryResponseTemplate>() {};
 
