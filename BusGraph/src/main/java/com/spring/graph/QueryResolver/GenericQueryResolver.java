@@ -23,7 +23,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-8490e3d8-3f5e-4eea-99b5-273a5f407057:80/"+toPascalCase("bus_routes")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-3a538319-7d06-4b91-bc7d-0753f70a24bb:80/"+toPascalCase("bus_routes")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<bus_routesResponseTemplate> responseType =
 	                new ParameterizedTypeReference<bus_routesResponseTemplate>() {};
 
@@ -36,7 +36,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-8490e3d8-3f5e-4eea-99b5-273a5f407057:80/"+toPascalCase("stops")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-3a538319-7d06-4b91-bc7d-0753f70a24bb:80/"+toPascalCase("stops")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<stopsResponseTemplate> responseType =
 	                new ParameterizedTypeReference<stopsResponseTemplate>() {};
 
@@ -49,7 +49,7 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-8490e3d8-3f5e-4eea-99b5-273a5f407057:80/"+toPascalCase("routes_stops")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-3a538319-7d06-4b91-bc7d-0753f70a24bb:80/"+toPascalCase("routes_stops")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<routes_stopsResponseTemplate> responseType =
 	                new ParameterizedTypeReference<routes_stopsResponseTemplate>() {};
 
