@@ -1,0 +1,21 @@
+extend type Query {
+ findDistributionByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): DistributionResponse
+}
+
+type DistributionResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsDistribution]
+}
+     
+type RecordsDistribution {
+ID: String
+name: String
+createdAt: String
+updatedAt: String
+
+    findvenderByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): venderResponse
+}

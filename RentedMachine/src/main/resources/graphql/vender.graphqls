@@ -1,0 +1,25 @@
+extend type Query {
+ findvenderByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): venderResponse
+}
+
+type venderResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsvender]
+}
+     
+type Recordsvender {
+ID: String
+productId: String
+reviewTitle: String
+reviewBody: String
+ratingValue: String
+createdAt: String
+updatedAt: String
+
+    findproductRatingsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): productRatingsResponse
+    findDistributionByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): DistributionResponse
+}
