@@ -10,8 +10,6 @@ import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import com.spring.graph.QueryResolver.reviewsResponseTemplate;
 import com.spring.graph.QueryResolver.GenericQueryResolver;
 import com.spring.graph.Model.Recordsreviews;
-  import com.spring.graph.QueryResolver.productRatingsResponseTemplate;
-  import com.spring.graph.QueryResolver.productsResponseTemplate;
 
 
 @Controller
@@ -26,40 +24,6 @@ public class reviewsController {
 		return  genericQueryResolver.findreviewsByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
     }
 	  
-  @SchemaMapping
-  public productRatingsResponseTemplate findproductRatingsByQuery(
-    Recordsreviews content,
-    @Argument String query,
-    @Argument String start,
-    @Argument String rows,
-    @Argument String filterField,
-    @Argument String filterQuery,
-    @Argument String sort,
-    @Argument String advanceField,
-    @Argument String advanceQuery,
-    @Argument String advance
-    
-  ) throws Exception {
-    String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findproductRatingsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
-  }
-  @SchemaMapping
-  public productsResponseTemplate findproductsByQuery(
-    Recordsreviews content,
-    @Argument String query,
-    @Argument String start,
-    @Argument String rows,
-    @Argument String filterField,
-    @Argument String filterQuery,
-    @Argument String sort,
-    @Argument String advanceField,
-    @Argument String advanceQuery,
-    @Argument String advance
-    
-  ) throws Exception {
-    String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findproductsByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
-  }
 
 
 	

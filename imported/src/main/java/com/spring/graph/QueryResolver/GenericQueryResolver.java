@@ -17,44 +17,18 @@ public class GenericQueryResolver {
 	@Autowired
 	RestTemplate restTemplate;
 		
-			public productsResponseTemplate  findproductsByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
-				
-			HttpHeaders headers = new HttpHeaders();
-		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-		    HttpEntity <String> entity = new HttpEntity<String>(headers);
-		    
-			String url="http://rest-service-369d3764-e26d-4190-9fcf-a595a8ad9d9f:80/"+toPascalCase("products")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<productsResponseTemplate> responseType =
-	                new ParameterizedTypeReference<productsResponseTemplate>() {};
-
-			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (productsResponseTemplate) response2;
-		}
 			public reviewsResponseTemplate  findreviewsByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 		    
-			String url="http://rest-service-369d3764-e26d-4190-9fcf-a595a8ad9d9f:80/"+toPascalCase("reviews")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+			String url="http://rest-service-aa15dce5-b6cc-493a-b1fe-7266790471c6:80/"+toPascalCase("reviews")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<reviewsResponseTemplate> responseType =
 	                new ParameterizedTypeReference<reviewsResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (reviewsResponseTemplate) response2;
-		}
-			public productRatingsResponseTemplate  findproductRatingsByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
-				
-			HttpHeaders headers = new HttpHeaders();
-		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-		    HttpEntity <String> entity = new HttpEntity<String>(headers);
-		    
-			String url="http://rest-service-369d3764-e26d-4190-9fcf-a595a8ad9d9f:80/"+toPascalCase("productRatings")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<productRatingsResponseTemplate> responseType =
-	                new ParameterizedTypeReference<productRatingsResponseTemplate>() {};
-
-			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (productRatingsResponseTemplate) response2;
 		}
 
 		public static String toPascalCase(String input) {

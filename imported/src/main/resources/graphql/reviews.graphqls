@@ -13,13 +13,11 @@ type reviewsResponse {
      
 type Recordsreviews {
 ID: String
+rating: String
+reviewText: String
 productId: String
-reviewTitle: String
-reviewBody: String
-ratingValue: String
+userId: String
 createdAt: String
 updatedAt: String
 
-    findproductRatingsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): productRatingsResponse
-    findproductsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): productsResponse
 }
