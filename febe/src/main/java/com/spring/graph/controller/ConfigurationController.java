@@ -1,5 +1,6 @@
 package com.spring.graph.controller;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -20,7 +21,7 @@ public class ConfigurationController {
 	GenericQueryResolver genericQueryResolver;
 	
 	@QueryMapping
-    public ConfigurationResponseTemplate findConfigurationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
+    public ConfigurationResponseTemplate findConfigurationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
     							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
 		return  genericQueryResolver.findConfigurationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
     }
@@ -32,7 +33,7 @@ public class ConfigurationController {
     @Argument String start,
     @Argument String rows,
     @Argument String filterField,
-    @Argument String filterQuery,
+    @Argument List<String> filterQuery,
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
