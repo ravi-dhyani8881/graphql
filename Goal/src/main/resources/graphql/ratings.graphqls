@@ -1,0 +1,23 @@
+extend type Query {
+ findratingsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): ratingsResponse
+}
+
+type ratingsResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsratings]
+}
+     
+type Recordsratings {
+ID: String
+reviewId: String
+productId: String
+ratingValue: String
+name: String
+
+    findproductsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): productsResponse
+    findreviewsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): reviewsResponse
+}
