@@ -1,0 +1,24 @@
+extend type Query {
+ findsalesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): salesResponse
+}
+
+type salesResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordssales]
+}
+     
+type Recordssales {
+ID: String
+productId: String
+quantity: String
+totalPrice: String
+saleDate: String
+createdAt: String
+updatedAt: String
+
+    findproductsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): productsResponse
+}
