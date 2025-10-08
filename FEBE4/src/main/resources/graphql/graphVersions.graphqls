@@ -12,7 +12,7 @@ type graphVersionsResponse {
 }
      
 type RecordsgraphVersions {
-id: String
+ID: String
 graphId: String
 graphVersion: String
 graphJson: String
