@@ -1,5 +1,5 @@
 extend type Query {
- findbus_routesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): bus_routesResponse
+ findbus_routesByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): bus_routesResponse
 }
 
 type bus_routesResponse {
@@ -17,5 +17,5 @@ Name: String
 createdAt: String
 updatedAt: String
 
-    findroutes_stopsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String ): routes_stopsResponse
+    findroutes_stopsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): routes_stopsResponse
 }
