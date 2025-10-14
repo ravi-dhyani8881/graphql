@@ -1,0 +1,17 @@
+extend type Query {
+ finduserOrgMappingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): userOrgMappingResponse
+}
+
+type userOrgMappingResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [RecordsuserOrgMapping]
+}
+     
+type RecordsuserOrgMapping {
+id: String
+
+}

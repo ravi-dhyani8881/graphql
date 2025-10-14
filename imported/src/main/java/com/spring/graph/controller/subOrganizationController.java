@@ -1,5 +1,6 @@
 package com.spring.graph.controller;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -25,7 +26,7 @@ public class subOrganizationController {
 	GenericQueryResolver genericQueryResolver;
 	
 	@QueryMapping
-    public subOrganizationResponseTemplate findsubOrganizationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument String filterQuery,
+    public subOrganizationResponseTemplate findsubOrganizationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
     							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
 		return  genericQueryResolver.findsubOrganizationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
     }
@@ -37,7 +38,7 @@ public class subOrganizationController {
     @Argument String start,
     @Argument String rows,
     @Argument String filterField,
-    @Argument String filterQuery,
+    @Argument List<String> filterQuery,
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
@@ -54,7 +55,7 @@ public class subOrganizationController {
     @Argument String start,
     @Argument String rows,
     @Argument String filterField,
-    @Argument String filterQuery,
+    @Argument List<String> filterQuery,
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
@@ -71,7 +72,7 @@ public class subOrganizationController {
     @Argument String start,
     @Argument String rows,
     @Argument String filterField,
-    @Argument String filterQuery,
+    @Argument List<String> filterQuery,
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
@@ -88,7 +89,7 @@ public class subOrganizationController {
     @Argument String start,
     @Argument String rows,
     @Argument String filterField,
-    @Argument String filterQuery,
+    @Argument List<String> filterQuery,
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
@@ -105,7 +106,7 @@ public class subOrganizationController {
     @Argument String start,
     @Argument String rows,
     @Argument String filterField,
-    @Argument String filterQuery,
+    @Argument List<String> filterQuery,
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
@@ -122,7 +123,7 @@ public class subOrganizationController {
     @Argument String start,
     @Argument String rows,
     @Argument String filterField,
-    @Argument String filterQuery,
+    @Argument List<String> filterQuery,
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,

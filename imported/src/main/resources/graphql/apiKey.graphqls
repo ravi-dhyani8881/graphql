@@ -1,5 +1,5 @@
 extend type Query {
- findapiKeyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: String, sort: String, advanceField: String, advanceQuery: String, advance: String): apiKeyResponse
+ findapiKeyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): apiKeyResponse
 }
 
 type apiKeyResponse {
@@ -18,5 +18,8 @@ apiKey: String
 status: String
 addedDate: String
 lastUpdate: String
+graphId: String
 
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
+    findgraphByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): graphResponse
 }
