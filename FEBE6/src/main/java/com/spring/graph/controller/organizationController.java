@@ -1,0 +1,139 @@
+package com.spring.graph.controller;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.stereotype.Controller;
+
+import com.spring.graph.utils.QueryUtils;
+import org.springframework.graphql.data.method.annotation.SchemaMapping;
+import com.spring.graph.QueryResolver.organizationResponseTemplate;
+import com.spring.graph.QueryResolver.GenericQueryResolver;
+import com.spring.graph.Model.Recordsorganization;
+  import com.spring.graph.QueryResolver.subOrganizationResponseTemplate;
+  import com.spring.graph.QueryResolver.environmentResponseTemplate;
+  import com.spring.graph.QueryResolver.userOrgResponseTemplate;
+  import com.spring.graph.QueryResolver.invitationResponseTemplate;
+  import com.spring.graph.QueryResolver.projectResponseTemplate;
+  import com.spring.graph.QueryResolver.publishLogResponseTemplate;
+
+
+@Controller
+public class organizationController {
+
+	@Autowired
+	GenericQueryResolver genericQueryResolver;
+	
+	@QueryMapping
+    public organizationResponseTemplate findorganizationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
+		return  genericQueryResolver.findorganizationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
+    }
+	  
+  @SchemaMapping
+  public subOrganizationResponseTemplate findsubOrganizationByQuery(
+    Recordsorganization content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+  @SchemaMapping
+  public environmentResponseTemplate findenvironmentByQuery(
+    Recordsorganization content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findenvironmentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+  @SchemaMapping
+  public userOrgResponseTemplate finduserOrgByQuery(
+    Recordsorganization content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.finduserOrgByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+  @SchemaMapping
+  public invitationResponseTemplate findinvitationByQuery(
+    Recordsorganization content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findinvitationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+  @SchemaMapping
+  public projectResponseTemplate findprojectByQuery(
+    Recordsorganization content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findprojectByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+  @SchemaMapping
+  public publishLogResponseTemplate findpublishLogByQuery(
+    Recordsorganization content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findpublishLogByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+  }
+
+
+	
+}
