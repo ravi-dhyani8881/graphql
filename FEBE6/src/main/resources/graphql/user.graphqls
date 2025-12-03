@@ -21,7 +21,7 @@ lastName: String
 address: String
 company: String
 role: String
-passwordHash: String
+password: String
 passwordSalt: String
 createdAt: String
 updatedAt: String
