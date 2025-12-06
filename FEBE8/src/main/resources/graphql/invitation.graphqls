@@ -1,0 +1,24 @@
+extend type Query {
+ findinvitationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): invitationResponse
+}
+
+type invitationResponse {
+  start: String
+  row: String
+  statusCode: Int
+  totalRecords: Int
+  advanced: [Advanced]
+  records: [Recordsinvitation]
+}
+     
+type Recordsinvitation {
+id: String
+email: String
+orgId: String
+role: String
+token: String
+createdAt: String
+updatedAt: String
+
+    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): organizationResponse
+}
