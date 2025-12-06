@@ -12,7 +12,7 @@ type deploymentResponse {
 }
      
 type Recordsdeployment {
-id: String
+ID: String
 projectId: String
 versionId: String
 deploymentConfigurationId: String

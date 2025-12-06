@@ -12,7 +12,7 @@ type versionResponse {
 }
      
 type Recordsversion {
-id: String
+ID: String
 projectId: String
 name: String
 description: String

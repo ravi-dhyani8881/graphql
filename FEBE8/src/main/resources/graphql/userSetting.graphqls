@@ -12,7 +12,7 @@ type userSettingResponse {
 }
      
 type RecordsuserSetting {
-id: String
+ID: String
 orgId: String
 subOrgId: String
 environmentId: String

@@ -12,7 +12,7 @@ type earlyAccessResponse {
 }
      
 type RecordsearlyAccess {
-id: String
+ID: String
 firstName: String
 lastName: String
 email: String

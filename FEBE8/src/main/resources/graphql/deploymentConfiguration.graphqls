@@ -12,7 +12,7 @@ type deploymentConfigurationResponse {
 }
      
 type RecordsdeploymentConfiguration {
-id: String
+ID: String
 configurationId: String
 replicaCount: String
 createdAt: String

@@ -12,7 +12,7 @@ type chatHistoryResponse {
 }
      
 type RecordschatHistory {
-id: String
+ID: String
 userId: String
 messages: String
 createdAt: String
