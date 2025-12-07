@@ -12,7 +12,7 @@ type configurationResponse {
 }
      
 type Recordsconfiguration {
-id: String
+ID: String
 replicaSize: String
 createdAt: String
 updatedAt: String

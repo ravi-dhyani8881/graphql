@@ -12,7 +12,7 @@ type invitationResponse {
 }
      
 type Recordsinvitation {
-id: String
+ID: String
 email: String
 orgId: String
 role: String

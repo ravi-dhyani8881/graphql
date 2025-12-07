@@ -12,7 +12,7 @@ type userOrgResponse {
 }
      
 type RecordsuserOrg {
-id: String
+ID: String
 userId: String
 orgId: String
 createdAt: String

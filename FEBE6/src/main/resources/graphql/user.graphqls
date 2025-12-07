@@ -12,9 +12,8 @@ type userResponse {
 }
      
 type Recordsuser {
-id: String
+ID: String
 email: String
-userStatus: String
 firstName: String
 middleName: String
 lastName: String
@@ -26,6 +25,7 @@ passwordSalt: String
 createdAt: String
 updatedAt: String
 userActivationKey: String
+userStatus: String
 
     findapiKeyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): apiKeyResponse
     findchatHistoryByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): chatHistoryResponse

@@ -12,7 +12,7 @@ type projectResponse {
 }
      
 type Recordsproject {
-id: String
+ID: String
 name: String
 description: String
 orgId: String
