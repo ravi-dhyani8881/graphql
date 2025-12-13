@@ -32,7 +32,7 @@ public class earlyAccessResponseTemplate {
 		return data;
 	}
 
-	public void setData(<RecordsearlyAccess> data) {
+	public void setData(List<RecordsearlyAccess> data) {
 		this.data = data;
 	}
 

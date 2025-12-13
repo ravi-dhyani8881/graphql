@@ -32,7 +32,7 @@ public class projectResponseTemplate {
 		return data;
 	}
 
-	public void setData(<Recordsproject> data) {
+	public void setData(List<Recordsproject> data) {
 		this.data = data;
 	}
 

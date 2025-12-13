@@ -32,7 +32,7 @@ public class versionResponseTemplate {
 		return data;
 	}
 
-	public void setData(<Recordsversion> data) {
+	public void setData(List<Recordsversion> data) {
 		this.data = data;
 	}
 

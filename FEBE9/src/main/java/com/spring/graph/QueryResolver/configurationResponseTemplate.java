@@ -32,7 +32,7 @@ public class configurationResponseTemplate {
 		return data;
 	}
 
-	public void setData(<Recordsconfiguration> data) {
+	public void setData(List<Recordsconfiguration> data) {
 		this.data = data;
 	}
 

@@ -32,7 +32,7 @@ public class publishLogResponseTemplate {
 		return data;
 	}
 
-	public void setData(<RecordspublishLog> data) {
+	public void setData(List<RecordspublishLog> data) {
 		this.data = data;
 	}
 

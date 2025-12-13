@@ -32,7 +32,7 @@ public class invitationResponseTemplate {
 		return data;
 	}
 
-	public void setData(<Recordsinvitation> data) {
+	public void setData(List<Recordsinvitation> data) {
 		this.data = data;
 	}
 

@@ -32,7 +32,7 @@ public class apiKeyResponseTemplate {
 		return data;
 	}
 
-	public void setData(<RecordsapiKey> data) {
+	public void setData(List<RecordsapiKey> data) {
 		this.data = data;
 	}
 

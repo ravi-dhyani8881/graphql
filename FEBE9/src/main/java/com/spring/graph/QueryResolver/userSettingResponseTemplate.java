@@ -32,7 +32,7 @@ public class userSettingResponseTemplate {
 		return data;
 	}
 
-	public void setData(<RecordsuserSetting> data) {
+	public void setData(List<RecordsuserSetting> data) {
 		this.data = data;
 	}
 

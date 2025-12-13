@@ -32,7 +32,7 @@ public class deploymentResponseTemplate {
 		return data;
 	}
 
-	public void setData(<Recordsdeployment> data) {
+	public void setData(List<Recordsdeployment> data) {
 		this.data = data;
 	}
 

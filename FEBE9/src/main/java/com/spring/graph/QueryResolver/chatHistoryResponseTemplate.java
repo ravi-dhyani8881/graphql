@@ -32,7 +32,7 @@ public class chatHistoryResponseTemplate {
 		return data;
 	}
 
-	public void setData(<RecordschatHistory> data) {
+	public void setData(List<RecordschatHistory> data) {
 		this.data = data;
 	}
 

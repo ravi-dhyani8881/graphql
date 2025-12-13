@@ -32,7 +32,7 @@ public class environmentResponseTemplate {
 		return data;
 	}
 
-	public void setData(<Recordsenvironment> data) {
+	public void setData(List<Recordsenvironment> data) {
 		this.data = data;
 	}
 
