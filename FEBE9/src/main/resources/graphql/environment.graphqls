@@ -1,0 +1,26 @@
+extend type Query {
+ findenvironmentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): environmentResponse
+}
+
+
+type environmentResponse {
+  data: [Data]
+  pagination: Pagination
+}
+
+
+     
+type Records Data {
+ID: String
+orgId: String
+subOrgId: String
+name: String
+description: String
+createdAt: String
+updatedAt: String
+
+    findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): subOrganizationResponse
+    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): organizationResponse
+    findprojectByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): projectResponse
+    findpublishLogByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): publishLogResponse
+}

@@ -1,0 +1,20 @@
+extend type Query {
+ findconfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): configurationResponse
+}
+
+
+type configurationResponse {
+  data: [Data]
+  pagination: Pagination
+}
+
+
+     
+type Records Data {
+ID: String
+replicaSize: String
+createdAt: String
+updatedAt: String
+
+    finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): deploymentConfigurationResponse
+}

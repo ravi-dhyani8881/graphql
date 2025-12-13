@@ -1,0 +1,21 @@
+extend type Query {
+ findchatHistoryByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): chatHistoryResponse
+}
+
+
+type chatHistoryResponse {
+  data: [Data]
+  pagination: Pagination
+}
+
+
+     
+type Records Data {
+ID: String
+userId: String
+messages: String
+createdAt: String
+updatedAt: String
+
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
+}

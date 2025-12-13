@@ -1,0 +1,24 @@
+extend type Query {
+ findapiKeyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): apiKeyResponse
+}
+
+
+type apiKeyResponse {
+  data: [Data]
+  pagination: Pagination
+}
+
+
+     
+type Records Data {
+ID: String
+userId: String
+apiKey: String
+status: String
+projectId: String
+createdAt: String
+updatedAt: String
+
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
+    findprojectByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): projectResponse
+}
