@@ -2,16 +2,15 @@ extend type Query {
  findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): organizationResponse
 }
 
+
 type organizationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsorganization]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type Recordsorganization {
+type Records Data {
 ID: String
 name: String
 description: String

@@ -8,3 +8,9 @@ type Advanced {
     name: String
     count: Int
   }
+
+  type Pagination {
+  total: Int
+  limit: String
+  offset: String
+}

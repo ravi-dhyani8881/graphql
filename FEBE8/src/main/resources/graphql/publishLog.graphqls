@@ -2,16 +2,15 @@ extend type Query {
  findpublishLogByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): publishLogResponse
 }
 
+
 type publishLogResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [RecordspublishLog]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type RecordspublishLog {
+type Records Data {
 ID: String
 endpointType: String
 orgId: String

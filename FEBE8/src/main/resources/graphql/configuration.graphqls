@@ -2,16 +2,15 @@ extend type Query {
  findconfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): configurationResponse
 }
 
+
 type configurationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsconfiguration]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type Recordsconfiguration {
+type Records Data {
 ID: String
 replicaSize: String
 createdAt: String

@@ -2,16 +2,15 @@ extend type Query {
  findinvitationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): invitationResponse
 }
 
+
 type invitationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsinvitation]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type Recordsinvitation {
+type Records Data {
 ID: String
 email: String
 orgId: String

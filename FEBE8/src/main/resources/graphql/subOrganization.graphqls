@@ -2,16 +2,15 @@ extend type Query {
  findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): subOrganizationResponse
 }
 
+
 type subOrganizationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [RecordssubOrganization]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type RecordssubOrganization {
+type Records Data {
 ID: String
 orgId: String
 name: String

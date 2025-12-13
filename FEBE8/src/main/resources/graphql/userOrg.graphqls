@@ -2,16 +2,15 @@ extend type Query {
  finduserOrgByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): userOrgResponse
 }
 
+
 type userOrgResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [RecordsuserOrg]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type RecordsuserOrg {
+type Records Data {
 ID: String
 userId: String
 orgId: String

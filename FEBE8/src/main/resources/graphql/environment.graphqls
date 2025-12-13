@@ -2,16 +2,15 @@ extend type Query {
  findenvironmentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): environmentResponse
 }
 
+
 type environmentResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsenvironment]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type Recordsenvironment {
+type Records Data {
 ID: String
 orgId: String
 subOrgId: String

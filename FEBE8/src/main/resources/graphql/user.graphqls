@@ -2,16 +2,15 @@ extend type Query {
  finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): userResponse
 }
 
+
 type userResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsuser]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type Recordsuser {
+type Records Data {
 ID: String
 email: String
 firstName: String

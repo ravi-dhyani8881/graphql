@@ -2,16 +2,15 @@ extend type Query {
  finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): deploymentConfigurationResponse
 }
 
+
 type deploymentConfigurationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [RecordsdeploymentConfiguration]
+  data: [Data]
+  pagination: Pagination
 }
+
+
      
-type RecordsdeploymentConfiguration {
+type Records Data {
 ID: String
 configurationId: String
 replicaCount: String
