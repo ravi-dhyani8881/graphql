@@ -28,11 +28,11 @@ public class chatHistoryResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<RecordschatHistory> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<RecordschatHistory> data) {
 		this.data = data;
 	}
 

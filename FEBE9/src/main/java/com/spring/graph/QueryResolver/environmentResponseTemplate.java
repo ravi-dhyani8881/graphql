@@ -28,11 +28,11 @@ public class environmentResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<Recordsenvironment> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<Recordsenvironment> data) {
 		this.data = data;
 	}
 

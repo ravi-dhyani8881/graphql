@@ -28,11 +28,11 @@ public class projectResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<Recordsproject> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<Recordsproject> data) {
 		this.data = data;
 	}
 

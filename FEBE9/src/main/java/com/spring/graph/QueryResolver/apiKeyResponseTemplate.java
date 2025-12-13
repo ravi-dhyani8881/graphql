@@ -28,11 +28,11 @@ public class apiKeyResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<RecordsapiKey> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<RecordsapiKey> data) {
 		this.data = data;
 	}
 

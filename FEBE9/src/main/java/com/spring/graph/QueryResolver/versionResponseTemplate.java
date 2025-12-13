@@ -28,11 +28,11 @@ public class versionResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<Recordsversion> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<Recordsversion> data) {
 		this.data = data;
 	}
 

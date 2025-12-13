@@ -28,11 +28,11 @@ public class deploymentConfigurationResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<RecordsdeploymentConfiguration> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<RecordsdeploymentConfiguration> data) {
 		this.data = data;
 	}
 

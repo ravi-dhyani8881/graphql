@@ -28,11 +28,11 @@ public class userSettingResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<RecordsuserSetting> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<RecordsuserSetting> data) {
 		this.data = data;
 	}
 

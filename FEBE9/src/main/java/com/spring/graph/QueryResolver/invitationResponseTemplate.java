@@ -28,11 +28,11 @@ public class invitationResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<Recordsinvitation> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<Recordsinvitation> data) {
 		this.data = data;
 	}
 

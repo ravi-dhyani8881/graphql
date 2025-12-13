@@ -28,11 +28,11 @@ public class subOrganizationResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<RecordssubOrganization> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<RecordssubOrganization> data) {
 		this.data = data;
 	}
 

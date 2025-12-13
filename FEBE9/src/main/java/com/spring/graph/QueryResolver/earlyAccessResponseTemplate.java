@@ -28,11 +28,11 @@ public class earlyAccessResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<RecordsearlyAccess> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<RecordsearlyAccess> data) {
 		this.data = data;
 	}
 

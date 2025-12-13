@@ -28,11 +28,11 @@ public class publishLogResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsuser> getData() {
+	public List<RecordspublishLog> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsuser> data) {
+	public void setData(<RecordspublishLog> data) {
 		this.data = data;
 	}
 
