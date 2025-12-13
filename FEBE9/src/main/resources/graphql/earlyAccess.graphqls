@@ -2,15 +2,12 @@ extend type Query {
  findearlyAccessByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): earlyAccessResponse
 }
 
-
 type earlyAccessResponse {
   data: [Data]
   pagination: Pagination
 }
-
-
      
-type Records Data {
+type Data {
 ID: String
 firstName: String
 lastName: String
