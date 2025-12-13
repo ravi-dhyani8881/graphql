@@ -10,54 +10,32 @@ import com.spring.graph.Model.Recordsenvironment;
 public class environmentResponseTemplate {
 
 	
-	String start;
-    String row;
-    String statusCode;
-    String totalRecords;
+	
+	@JsonProperty("pagination")
+	private Pagination pagination;
 
-	@JsonProperty("records")
-    private List<Recordsenvironment> records;
+	@JsonProperty("data")
+    private List<Recordsenvironment> data;
     
     public ArrayList<Advanced> advanced;
 
-	public String getStart() {
-		return start;
+	
+	public Pagination getPagination() {
+		return pagination;
 	}
 
-	public void setStart(String start) {
-		this.start = start;
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
 	}
 
-	public String getRow() {
-		return row;
+	public List<Recordsuser> getData() {
+		return data;
 	}
 
-	public void setRow(String row) {
-		this.row = row;
+	public void setData(List<Recordsuser> data) {
+		this.data = data;
 	}
 
-	public String getStatusCode() {
-		return statusCode;
-	}
-
-	public void setStatusCode(String statusCode) {
-		this.statusCode = statusCode;
-	}
-
-	public String getTotalRecords() {
-		return totalRecords;
-	}
-
-	public void setTotalRecords(String totalRecords) {
-		this.totalRecords = totalRecords;
-	}
-	public List<Recordsenvironment> getRecords() {
-		return records;
-	}
-
-	public void setRecords(List<Recordsenvironment> records) {
-		this.records = records;
-	}
 	public ArrayList<Advanced> getAdvanced() {
 		return advanced;
 	}
