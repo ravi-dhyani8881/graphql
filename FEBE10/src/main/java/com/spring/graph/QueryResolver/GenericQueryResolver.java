@@ -25,6 +25,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -32,7 +36,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("user")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/user?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -56,6 +60,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -63,7 +71,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("organization")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/organization?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -87,6 +95,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -94,7 +106,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("subOrganization")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/subOrganization?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -118,6 +130,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -125,7 +141,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("userOrg")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/userOrg?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -149,6 +165,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -156,7 +176,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("invitation")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/invitation?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -180,6 +200,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -187,7 +211,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("environment")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/environment?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -211,6 +235,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -218,7 +246,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("project")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/project?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -242,6 +270,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -249,7 +281,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("version")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/version?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -273,6 +305,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -280,7 +316,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("configuration")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/configuration?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -304,6 +340,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -311,7 +351,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("deploymentConfiguration")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/deploymentConfiguration?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -335,6 +375,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -342,7 +386,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("deployment")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/deployment?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -366,6 +410,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -373,7 +421,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("publishLog")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/publishLog?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -397,6 +445,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -404,7 +456,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("apiKey")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/apiKey?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -428,6 +480,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -435,7 +491,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("userSetting")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/userSetting?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -459,6 +515,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -466,7 +526,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("chatHistory")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/chatHistory?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -490,6 +550,10 @@ public class GenericQueryResolver {
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
+			headers.set("Authorization", 
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+        	);
+			
 			String fqParams = "";
 						if (filterQuery != null && !filterQuery.isEmpty()) {
 							fqParams = filterQuery.stream()
@@ -497,7 +561,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/"+toPascalCase("earlyAccess")+"graph/findByQuery?"
+			String url = "http://localhost:8080/api/earlyAccess?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
