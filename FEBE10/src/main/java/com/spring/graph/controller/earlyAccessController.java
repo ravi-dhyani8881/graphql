@@ -21,11 +21,9 @@ public class earlyAccessController {
 	
 	@QueryMapping
     public earlyAccessResponseTemplate findearlyAccessByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
-		return  genericQueryResolver.findearlyAccessByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,@Argument String token) {
+		return  genericQueryResolver.findearlyAccessByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
     }
 	  
 
-
-	
 }

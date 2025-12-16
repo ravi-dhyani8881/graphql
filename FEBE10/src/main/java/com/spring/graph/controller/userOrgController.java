@@ -23,8 +23,8 @@ public class userOrgController {
 	
 	@QueryMapping
     public userOrgResponseTemplate finduserOrgByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
-		return  genericQueryResolver.finduserOrgByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,@Argument String token) {
+		return  genericQueryResolver.finduserOrgByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
     }
 	  
   @SchemaMapping
@@ -42,7 +42,7 @@ public class userOrgController {
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
   public userResponseTemplate finduserByQuery(
@@ -59,9 +59,7 @@ public class userOrgController {
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.finduserByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.finduserByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
 
-
-	
 }
