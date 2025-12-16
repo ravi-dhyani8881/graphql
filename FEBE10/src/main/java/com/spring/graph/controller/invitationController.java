@@ -37,7 +37,8 @@ public class invitationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
