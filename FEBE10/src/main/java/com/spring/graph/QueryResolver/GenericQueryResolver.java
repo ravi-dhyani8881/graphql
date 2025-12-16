@@ -19,14 +19,14 @@ public class GenericQueryResolver {
 	@Autowired
 	RestTemplate restTemplate;
 		
-			public userResponseTemplate  finduserByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public userResponseTemplate  finduserByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -54,14 +54,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (userResponseTemplate) response2;
 		}
-			public organizationResponseTemplate  findorganizationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public organizationResponseTemplate  findorganizationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -89,14 +89,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (organizationResponseTemplate) response2;
 		}
-			public subOrganizationResponseTemplate  findsubOrganizationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public subOrganizationResponseTemplate  findsubOrganizationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -124,14 +124,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (subOrganizationResponseTemplate) response2;
 		}
-			public userOrgResponseTemplate  finduserOrgByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public userOrgResponseTemplate  finduserOrgByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -159,14 +159,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (userOrgResponseTemplate) response2;
 		}
-			public invitationResponseTemplate  findinvitationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public invitationResponseTemplate  findinvitationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -194,14 +194,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (invitationResponseTemplate) response2;
 		}
-			public environmentResponseTemplate  findenvironmentByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public environmentResponseTemplate  findenvironmentByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -229,14 +229,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (environmentResponseTemplate) response2;
 		}
-			public projectResponseTemplate  findprojectByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public projectResponseTemplate  findprojectByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -264,14 +264,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (projectResponseTemplate) response2;
 		}
-			public versionResponseTemplate  findversionByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public versionResponseTemplate  findversionByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -299,14 +299,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (versionResponseTemplate) response2;
 		}
-			public configurationResponseTemplate  findconfigurationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public configurationResponseTemplate  findconfigurationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -334,14 +334,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (configurationResponseTemplate) response2;
 		}
-			public deploymentConfigurationResponseTemplate  finddeploymentConfigurationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public deploymentConfigurationResponseTemplate  finddeploymentConfigurationByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -369,14 +369,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (deploymentConfigurationResponseTemplate) response2;
 		}
-			public deploymentResponseTemplate  finddeploymentByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public deploymentResponseTemplate  finddeploymentByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -404,14 +404,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (deploymentResponseTemplate) response2;
 		}
-			public publishLogResponseTemplate  findpublishLogByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public publishLogResponseTemplate  findpublishLogByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -439,14 +439,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (publishLogResponseTemplate) response2;
 		}
-			public apiKeyResponseTemplate  findapiKeyByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public apiKeyResponseTemplate  findapiKeyByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -474,14 +474,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (apiKeyResponseTemplate) response2;
 		}
-			public userSettingResponseTemplate  finduserSettingByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public userSettingResponseTemplate  finduserSettingByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -509,14 +509,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (userSettingResponseTemplate) response2;
 		}
-			public chatHistoryResponseTemplate  findchatHistoryByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public chatHistoryResponseTemplate  findchatHistoryByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
@@ -544,14 +544,14 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (chatHistoryResponseTemplate) response2;
 		}
-			public earlyAccessResponseTemplate  findearlyAccessByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public earlyAccessResponseTemplate  findearlyAccessByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
 
 			headers.set("Authorization", 
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiIwMWEwNjZhMi05ZGNlLTQ3N2ItOTI4Zi0wOWE5ZTE5YjhmYzgiLCJlbWFpbCI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsInN1YiI6InJhdmkuZGh5YW5pODg4MSsxQGdtYWlsLmNvbSIsImlhdCI6MTc2NTY4OTM5MCwiZXhwIjoxNzY1Nzc1NzkwfQ.u75mZVmKJE4YZA9XsgTWd5dz806_RLk7GyF8sUkHjAE"
+            "Bearer "+token
         	);
 			
 			String fqParams = "";
