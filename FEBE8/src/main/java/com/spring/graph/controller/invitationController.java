@@ -22,8 +22,8 @@ public class invitationController {
 	
 	@QueryMapping
     public invitationResponseTemplate findinvitationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
-		return  genericQueryResolver.findinvitationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,@Argument String token) {
+		return  genericQueryResolver.findinvitationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
     }
 	  
   @SchemaMapping
@@ -37,13 +37,12 @@ public class invitationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findorganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
 
-
-	
 }

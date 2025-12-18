@@ -10,54 +10,32 @@ import com.spring.graph.Model.RecordsdeploymentConfiguration;
 public class deploymentConfigurationResponseTemplate {
 
 	
-	String start;
-    String row;
-    String statusCode;
-    String totalRecords;
+	
+	@JsonProperty("pagination")
+	private Pagination pagination;
 
-	@JsonProperty("records")
-    private List<RecordsdeploymentConfiguration> records;
+	@JsonProperty("data")
+    private List<RecordsdeploymentConfiguration> data;
     
     public ArrayList<Advanced> advanced;
 
-	public String getStart() {
-		return start;
+	
+	public Pagination getPagination() {
+		return pagination;
 	}
 
-	public void setStart(String start) {
-		this.start = start;
+	public void setPagination(Pagination pagination) {
+		this.pagination = pagination;
 	}
 
-	public String getRow() {
-		return row;
+	public List<RecordsdeploymentConfiguration> getData() {
+		return data;
 	}
 
-	public void setRow(String row) {
-		this.row = row;
+	public void setData(List<RecordsdeploymentConfiguration> data) {
+		this.data = data;
 	}
 
-	public String getStatusCode() {
-		return statusCode;
-	}
-
-	public void setStatusCode(String statusCode) {
-		this.statusCode = statusCode;
-	}
-
-	public String getTotalRecords() {
-		return totalRecords;
-	}
-
-	public void setTotalRecords(String totalRecords) {
-		this.totalRecords = totalRecords;
-	}
-	public List<RecordsdeploymentConfiguration> getRecords() {
-		return records;
-	}
-
-	public void setRecords(List<RecordsdeploymentConfiguration> records) {
-		this.records = records;
-	}
 	public ArrayList<Advanced> getAdvanced() {
 		return advanced;
 	}

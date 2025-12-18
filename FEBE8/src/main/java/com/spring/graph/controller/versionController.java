@@ -23,8 +23,8 @@ public class versionController {
 	
 	@QueryMapping
     public versionResponseTemplate findversionByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
-		return  genericQueryResolver.findversionByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,@Argument String token) {
+		return  genericQueryResolver.findversionByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
     }
 	  
   @SchemaMapping
@@ -38,11 +38,12 @@ public class versionController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findprojectByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findprojectByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
   public deploymentResponseTemplate finddeploymentByQuery(
@@ -55,13 +56,12 @@ public class versionController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.finddeploymentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.finddeploymentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
 
-
-	
 }

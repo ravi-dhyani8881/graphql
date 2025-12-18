@@ -1,16 +1,13 @@
 extend type Query {
- findinvitationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): invitationResponse
+ findinvitationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): invitationResponse
 }
-
 
 type invitationResponse {
-  data: [Data]
+  data: [Recordsinvitation]
   pagination: Pagination
 }
-
-
      
-type Records Data {
+type Recordsinvitation {
 ID: String
 email: String
 orgId: String
@@ -19,5 +16,5 @@ token: String
 createdAt: String
 updatedAt: String
 
-    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): organizationResponse
+    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): organizationResponse
 }

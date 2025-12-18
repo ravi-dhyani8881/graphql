@@ -27,8 +27,8 @@ public class organizationController {
 	
 	@QueryMapping
     public organizationResponseTemplate findorganizationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance) {
-		return  genericQueryResolver.findorganizationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,@Argument String token) {
+		return  genericQueryResolver.findorganizationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
     }
 	  
   @SchemaMapping
@@ -42,11 +42,12 @@ public class organizationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findsubOrganizationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
   public environmentResponseTemplate findenvironmentByQuery(
@@ -59,11 +60,12 @@ public class organizationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findenvironmentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findenvironmentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
   public userOrgResponseTemplate finduserOrgByQuery(
@@ -76,11 +78,12 @@ public class organizationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.finduserOrgByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.finduserOrgByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
   public invitationResponseTemplate findinvitationByQuery(
@@ -93,11 +96,12 @@ public class organizationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findinvitationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findinvitationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
   public projectResponseTemplate findprojectByQuery(
@@ -110,11 +114,12 @@ public class organizationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findprojectByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findprojectByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
   public publishLogResponseTemplate findpublishLogByQuery(
@@ -127,13 +132,12 @@ public class organizationController {
     @Argument String sort,
     @Argument String advanceField,
     @Argument String advanceQuery,
-    @Argument String advance
+    @Argument String advance,
+    @Argument String token
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
-    return genericQueryResolver.findpublishLogByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance);
+    return genericQueryResolver.findpublishLogByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
 
-
-	
 }

@@ -1,22 +1,19 @@
 extend type Query {
- finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): deploymentConfigurationResponse
+ finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): deploymentConfigurationResponse
 }
-
 
 type deploymentConfigurationResponse {
-  data: [Data]
+  data: [RecordsdeploymentConfiguration]
   pagination: Pagination
 }
-
-
      
-type Records Data {
+type RecordsdeploymentConfiguration {
 ID: String
 configurationId: String
 replicaCount: String
 createdAt: String
 updatedAt: String
 
-    finddeploymentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): deploymentResponse
-    findconfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): configurationResponse
+    finddeploymentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): deploymentResponse
+    findconfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): configurationResponse
 }
