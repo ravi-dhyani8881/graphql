@@ -8,7 +8,7 @@ type campaignsResponse {
 }
      
 type Recordscampaigns {
-id: String
+ID: String
 key: String
 name: String
 description: String
