@@ -1,0 +1,20 @@
+extend type Query {
+ finduserSettingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): userSettingResponse
+}
+
+type userSettingResponse {
+  data: [RecordsuserSetting]
+  pagination: Pagination
+}
+     
+type RecordsuserSetting {
+ID: String
+orgId: String
+subOrgId: String
+environmentId: String
+userId: String
+createdAt: String
+updatedAt: String
+
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): userResponse
+}

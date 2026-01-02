@@ -1,0 +1,27 @@
+extend type Query {
+ findversionByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): versionResponse
+}
+
+type versionResponse {
+  data: [Recordsversion]
+  pagination: Pagination
+}
+     
+type Recordsversion {
+ID: String
+projectId: String
+name: String
+description: String
+schemaJson: String
+status: String
+notes: String
+domain: String
+graphQlUrl: String
+restUrl: String
+createdBy: String
+createdAt: String
+updatedAt: String
+
+    findprojectByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): projectResponse
+    finddeploymentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): deploymentResponse
+}

@@ -1,0 +1,67 @@
+package com.spring.graph.controller;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.stereotype.Controller;
+
+import com.spring.graph.utils.QueryUtils;
+import org.springframework.graphql.data.method.annotation.SchemaMapping;
+import com.spring.graph.QueryResolver.deploymentConfigurationResponseTemplate;
+import com.spring.graph.QueryResolver.GenericQueryResolver;
+import com.spring.graph.Model.RecordsdeploymentConfiguration;
+  import com.spring.graph.QueryResolver.deploymentResponseTemplate;
+  import com.spring.graph.QueryResolver.configurationResponseTemplate;
+
+
+@Controller
+public class deploymentConfigurationController {
+
+	@Autowired
+	GenericQueryResolver genericQueryResolver;
+	
+	@QueryMapping
+    public deploymentConfigurationResponseTemplate finddeploymentConfigurationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,@Argument String token) {
+		return  genericQueryResolver.finddeploymentConfigurationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
+    }
+	  
+  @SchemaMapping
+  public deploymentResponseTemplate finddeploymentByQuery(
+    RecordsdeploymentConfiguration content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance,
+    @Argument String token
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.finddeploymentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
+  }
+  @SchemaMapping
+  public configurationResponseTemplate findconfigurationByQuery(
+    RecordsdeploymentConfiguration content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance,
+    @Argument String token
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    return genericQueryResolver.findconfigurationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
+  }
+
+}
