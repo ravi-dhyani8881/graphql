@@ -1,5 +1,5 @@
 extend type Query {
- findconfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): configurationResponse
+ findconfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): configurationResponse
 }
 
 type configurationResponse {
@@ -13,5 +13,5 @@ replicaSize: String
 createdAt: String
 updatedAt: String
 
-    finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): deploymentConfigurationResponse
+    finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): deploymentConfigurationResponse
 }
