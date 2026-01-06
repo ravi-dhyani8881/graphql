@@ -1,0 +1,19 @@
+extend type Query {
+ finduserOrgByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): userOrgResponse
+}
+
+type userOrgResponse {
+  data: [RecordsuserOrg]
+  pagination: Pagination
+}
+     
+type RecordsuserOrg {
+ID: String
+userId: String
+orgId: String
+createdAt: String
+updatedAt: String
+
+    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): organizationResponse
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
+}
