@@ -579,7 +579,7 @@ public class GenericQueryResolver {
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (earlyAccessResponseTemplate) response2;
 		}
-			public campaignSubmissionsResponseTemplate  findcampaignSubmissionsByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
+			public campaign_submissionsResponseTemplate  findcampaign_submissionsByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -596,7 +596,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/api/campaignSubmissions?"
+			String url = "http://localhost:8080/api/campaign_submissions?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -607,12 +607,12 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-4bd7ef21-deca-430e-81c4-f8ae3f003bb6:80/"+toPascalCase("campaignSubmissions")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<campaignSubmissionsResponseTemplate> responseType =
-	                new ParameterizedTypeReference<campaignSubmissionsResponseTemplate>() {};
+		//	String url="http://rest-service-4bd7ef21-deca-430e-81c4-f8ae3f003bb6:80/"+toPascalCase("campaign_submissions")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<campaign_submissionsResponseTemplate> responseType =
+	                new ParameterizedTypeReference<campaign_submissionsResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (campaignSubmissionsResponseTemplate) response2;
+			return (campaign_submissionsResponseTemplate) response2;
 		}
 			public campaignsResponseTemplate  findcampaignsByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
