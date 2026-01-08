@@ -1,0 +1,28 @@
+extend type Query {
+ findcampaign_submissionsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): campaign_submissionsResponse
+}
+
+type campaign_submissionsResponse {
+  data: [Recordscampaign_submissions]
+  pagination: Pagination
+}
+     
+type Recordscampaign_submissions {
+ID: String
+campaign_key: String
+campaign_variant: String
+source_type: String
+source_id: String
+platform: String
+channel: String
+locale: String
+subject_user_id: String
+subject_order_id: String
+subject_product_id: String
+submitted_at: String
+payload: String
+createdAt: String
+updatedAt: String
+
+    findcampaignsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): campaignsResponse
+}
