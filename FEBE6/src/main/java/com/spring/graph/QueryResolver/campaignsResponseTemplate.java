@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.spring.graph.Model.Recordsorganization;
+import com.spring.graph.Model.Recordscampaigns;
 
 
-public class organizationResponseTemplate {
+public class campaignsResponseTemplate {
 
 	
 	
@@ -15,7 +15,7 @@ public class organizationResponseTemplate {
 	private Pagination pagination;
 
 	@JsonProperty("data")
-    private List<Recordsorganization> data;
+    private List<Recordscampaigns> data;
     
     public ArrayList<Advanced> advanced;
 
@@ -28,11 +28,11 @@ public class organizationResponseTemplate {
 		this.pagination = pagination;
 	}
 
-	public List<Recordsorganization> getData() {
+	public List<Recordscampaigns> getData() {
 		return data;
 	}
 
-	public void setData(List<Recordsorganization> data) {
+	public void setData(List<Recordscampaigns> data) {
 		this.data = data;
 	}
 

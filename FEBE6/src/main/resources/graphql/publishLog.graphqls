@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type publishLogResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [RecordspublishLog]
+  data: [RecordspublishLog]
+  pagination: Pagination
 }
      
 type RecordspublishLog {

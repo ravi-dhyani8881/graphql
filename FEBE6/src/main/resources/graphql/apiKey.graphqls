@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type apiKeyResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [RecordsapiKey]
+  data: [RecordsapiKey]
+  pagination: Pagination
 }
      
 type RecordsapiKey {

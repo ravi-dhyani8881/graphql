@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type configurationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsconfiguration]
+  data: [Recordsconfiguration]
+  pagination: Pagination
 }
      
 type Recordsconfiguration {

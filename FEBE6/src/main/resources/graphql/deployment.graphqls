@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type deploymentResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsdeployment]
+  data: [Recordsdeployment]
+  pagination: Pagination
 }
      
 type Recordsdeployment {

@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type subOrganizationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [RecordssubOrganization]
+  data: [RecordssubOrganization]
+  pagination: Pagination
 }
      
 type RecordssubOrganization {

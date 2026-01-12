@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type projectResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsproject]
+  data: [Recordsproject]
+  pagination: Pagination
 }
      
 type Recordsproject {

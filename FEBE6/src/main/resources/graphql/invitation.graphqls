@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type invitationResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsinvitation]
+  data: [Recordsinvitation]
+  pagination: Pagination
 }
      
 type Recordsinvitation {

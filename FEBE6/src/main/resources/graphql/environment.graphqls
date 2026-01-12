@@ -3,12 +3,8 @@ extend type Query {
 }
 
 type environmentResponse {
-  start: String
-  row: String
-  statusCode: Int
-  totalRecords: Int
-  advanced: [Advanced]
-  records: [Recordsenvironment]
+  data: [Recordsenvironment]
+  pagination: Pagination
 }
      
 type Recordsenvironment {
