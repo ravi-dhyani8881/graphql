@@ -17,6 +17,7 @@ public class publishLogResponseTemplate {
 	@JsonProperty("data")
     private List<RecordspublishLog> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

@@ -5,6 +5,7 @@ extend type Query {
 type chatHistoryResponse {
   data: [RecordschatHistory]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordschatHistory {

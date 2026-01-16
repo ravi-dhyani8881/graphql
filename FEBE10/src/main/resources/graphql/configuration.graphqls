@@ -5,6 +5,7 @@ extend type Query {
 type configurationResponse {
   data: [Recordsconfiguration]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsconfiguration {

@@ -17,6 +17,7 @@ public class chatHistoryResponseTemplate {
 	@JsonProperty("data")
     private List<RecordschatHistory> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

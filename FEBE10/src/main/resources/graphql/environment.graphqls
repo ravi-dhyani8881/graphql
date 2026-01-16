@@ -5,6 +5,7 @@ extend type Query {
 type environmentResponse {
   data: [Recordsenvironment]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsenvironment {

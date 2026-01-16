@@ -5,6 +5,7 @@ extend type Query {
 type publishLogResponse {
   data: [RecordspublishLog]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordspublishLog {

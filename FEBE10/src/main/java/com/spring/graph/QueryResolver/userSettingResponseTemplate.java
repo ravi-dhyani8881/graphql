@@ -17,6 +17,7 @@ public class userSettingResponseTemplate {
 	@JsonProperty("data")
     private List<RecordsuserSetting> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

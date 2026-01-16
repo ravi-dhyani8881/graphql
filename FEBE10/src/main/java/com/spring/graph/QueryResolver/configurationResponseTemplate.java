@@ -17,6 +17,7 @@ public class configurationResponseTemplate {
 	@JsonProperty("data")
     private List<Recordsconfiguration> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	
