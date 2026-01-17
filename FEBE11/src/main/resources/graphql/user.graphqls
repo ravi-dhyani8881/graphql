@@ -1,10 +1,11 @@
 extend type Query {
- finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): userResponse
+ finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): userResponse
 }
 
 type userResponse {
   data: [Recordsuser]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsuser {
@@ -23,9 +24,9 @@ updatedAt: String
 userActivationKey: String
 userStatus: String
 
-    findapiKeyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): apiKeyResponse
-    findchatHistoryByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): chatHistoryResponse
-    finduserOrgByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): userOrgResponse
-    findpublishLogByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): publishLogResponse
-    finduserSettingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): userSettingResponse
+    findapiKeyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): apiKeyResponse
+    findchatHistoryByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): chatHistoryResponse
+    finduserOrgByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userOrgResponse
+    findpublishLogByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): publishLogResponse
+    finduserSettingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userSettingResponse
 }

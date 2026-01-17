@@ -1,10 +1,11 @@
 extend type Query {
- finduserSettingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): userSettingResponse
+ finduserSettingByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): userSettingResponse
 }
 
 type userSettingResponse {
   data: [RecordsuserSetting]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordsuserSetting {
@@ -16,5 +17,5 @@ userId: String
 createdAt: String
 updatedAt: String
 
-    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): userResponse
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
 }

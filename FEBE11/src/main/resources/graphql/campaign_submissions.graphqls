@@ -1,10 +1,11 @@
 extend type Query {
- findcampaign_submissionsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): campaign_submissionsResponse
+ findcampaign_submissionsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): campaign_submissionsResponse
 }
 
 type campaign_submissionsResponse {
   data: [Recordscampaign_submissions]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordscampaign_submissions {
@@ -24,5 +25,5 @@ payload: String
 createdAt: String
 updatedAt: String
 
-    findcampaignsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): campaignsResponse
+    findcampaignsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): campaignsResponse
 }

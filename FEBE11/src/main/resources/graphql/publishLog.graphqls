@@ -1,10 +1,11 @@
 extend type Query {
- findpublishLogByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): publishLogResponse
+ findpublishLogByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): publishLogResponse
 }
 
 type publishLogResponse {
   data: [RecordspublishLog]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordspublishLog {
@@ -19,8 +20,8 @@ userId: String
 createdAt: String
 updatedAt: String
 
-    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): organizationResponse
-    findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): subOrganizationResponse
-    findenvironmentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): environmentResponse
-    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): userResponse
+    findorganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): organizationResponse
+    findsubOrganizationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): subOrganizationResponse
+    findenvironmentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): environmentResponse
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
 }

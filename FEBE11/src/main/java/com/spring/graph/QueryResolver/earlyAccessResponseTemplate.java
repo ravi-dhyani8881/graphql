@@ -17,6 +17,7 @@ public class earlyAccessResponseTemplate {
 	@JsonProperty("data")
     private List<RecordsearlyAccess> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

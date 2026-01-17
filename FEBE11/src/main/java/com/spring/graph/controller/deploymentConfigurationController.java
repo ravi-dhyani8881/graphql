@@ -6,6 +6,8 @@ import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
+import graphql.schema.DataFetchingEnvironment;
+
 import com.spring.graph.utils.QueryUtils;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import com.spring.graph.QueryResolver.deploymentConfigurationResponseTemplate;
@@ -23,8 +25,9 @@ public class deploymentConfigurationController {
 	
 	@QueryMapping
     public deploymentConfigurationResponseTemplate finddeploymentConfigurationByQuery(@Argument String query, @Argument String start,@Argument String rows, @Argument String filterField, @Argument List<String> filterQuery,
-    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,@Argument String token) {
-		return  genericQueryResolver.finddeploymentConfigurationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
+    							  @Argument String sort,@Argument String advanceField,@Argument String advanceQuery,@Argument String advance ,DataFetchingEnvironment env) {
+		String token = env.getGraphQlContext().get("token");	
+    return  genericQueryResolver.finddeploymentConfigurationByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
     }
 	  
   @SchemaMapping
@@ -39,10 +42,11 @@ public class deploymentConfigurationController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String token
+    DataFetchingEnvironment env
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
+    String token = env.getGraphQlContext().get("token");	
     return genericQueryResolver.finddeploymentByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
   @SchemaMapping
@@ -57,10 +61,11 @@ public class deploymentConfigurationController {
     @Argument String advanceField,
     @Argument String advanceQuery,
     @Argument String advance,
-    @Argument String token
+    DataFetchingEnvironment env
     
   ) throws Exception {
     String query2 = QueryUtils.replaceTokens(query, content);  
+    String token = env.getGraphQlContext().get("token");	
     return genericQueryResolver.findconfigurationByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
   }
 

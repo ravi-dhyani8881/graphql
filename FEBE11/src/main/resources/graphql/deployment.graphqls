@@ -1,10 +1,11 @@
 extend type Query {
- finddeploymentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): deploymentResponse
+ finddeploymentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): deploymentResponse
 }
 
 type deploymentResponse {
   data: [Recordsdeployment]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsdeployment {
@@ -17,7 +18,7 @@ status: String
 createdAt: String
 updatedAt: String
 
-    findprojectByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): projectResponse
-    findversionByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): versionResponse
-    finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String , token: String): deploymentConfigurationResponse
+    findprojectByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): projectResponse
+    findversionByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): versionResponse
+    finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): deploymentConfigurationResponse
 }

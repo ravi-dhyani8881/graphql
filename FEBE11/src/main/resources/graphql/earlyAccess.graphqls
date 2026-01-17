@@ -1,10 +1,11 @@
 extend type Query {
- findearlyAccessByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String, token: String): earlyAccessResponse
+ findearlyAccessByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): earlyAccessResponse
 }
 
 type earlyAccessResponse {
   data: [RecordsearlyAccess]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordsearlyAccess {
