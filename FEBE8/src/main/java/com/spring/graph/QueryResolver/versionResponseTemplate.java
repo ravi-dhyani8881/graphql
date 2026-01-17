@@ -17,6 +17,7 @@ public class versionResponseTemplate {
 	@JsonProperty("data")
     private List<Recordsversion> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

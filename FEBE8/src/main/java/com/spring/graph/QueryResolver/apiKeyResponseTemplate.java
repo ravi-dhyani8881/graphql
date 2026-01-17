@@ -17,6 +17,7 @@ public class apiKeyResponseTemplate {
 	@JsonProperty("data")
     private List<RecordsapiKey> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

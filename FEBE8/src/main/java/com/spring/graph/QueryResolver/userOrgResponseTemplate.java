@@ -17,6 +17,7 @@ public class userOrgResponseTemplate {
 	@JsonProperty("data")
     private List<RecordsuserOrg> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

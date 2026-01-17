@@ -5,6 +5,7 @@ extend type Query {
 type projectResponse {
   data: [Recordsproject]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsproject {

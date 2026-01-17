@@ -5,6 +5,7 @@ extend type Query {
 type campaign_submissionsResponse {
   data: [Recordscampaign_submissions]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordscampaign_submissions {
