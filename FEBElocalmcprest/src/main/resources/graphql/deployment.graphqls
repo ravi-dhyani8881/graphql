@@ -1,0 +1,24 @@
+extend type Query {
+ finddeploymentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): deploymentResponse
+}
+
+type deploymentResponse {
+  data: [Recordsdeployment]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordsdeployment {
+ID: String
+projectId: String
+versionId: String
+deploymentConfigurationId: String
+deployedBy: String
+status: String
+createdAt: String
+updatedAt: String
+
+    findprojectByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): projectResponse
+    findversionByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): versionResponse
+    finddeploymentConfigurationByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): deploymentConfigurationResponse
+}
