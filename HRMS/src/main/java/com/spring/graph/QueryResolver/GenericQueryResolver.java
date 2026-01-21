@@ -1,6 +1,8 @@
 package com.spring.graph.QueryResolver;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
@@ -17,13 +19,35 @@ public class GenericQueryResolver {
 	@Autowired
 	RestTemplate restTemplate;
 		
-			public usersResponseTemplate  findusersByQuery(String query, String start,  String rows, String filterField,  String filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance) {	
+			public usersResponseTemplate  findusersByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 		    HttpEntity <String> entity = new HttpEntity<String>(headers);
-		    
-			String url="http://rest-service-4c3ed3cd-20a8-4000-957c-1c96050e035f:80/"+toPascalCase("users")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+
+			headers.set("Authorization", 
+            "Bearer "+token
+        	);
+			
+			String fqParams = "";
+						if (filterQuery != null && !filterQuery.isEmpty()) {
+							fqParams = filterQuery.stream()
+									.map(fq -> "filterQuery=" + fq)
+									.collect(Collectors.joining("&"));
+						}
+
+			String url = "http://localhost:8080/api/users?"
+		            + "query=" + query
+		            + "&start=" + start
+		            + "&rows=" + rows
+		            + "&filterField=" + filterField
+		            + (fqParams.isEmpty() ? "" : "&" + fqParams)   // ✅ only append fqParams
+		            + "&sort=" + sort
+		            + "&advanceField=" + advanceField
+		            + "&advanceQuery=" + advanceQuery
+		            + "&advance=" + advance;				
+  
+		//	String url="http://rest-service-b6aa7816-8002-4b22-bf6b-5b85b15f49b2:80/"+toPascalCase("users")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<usersResponseTemplate> responseType =
 	                new ParameterizedTypeReference<usersResponseTemplate>() {};
 
