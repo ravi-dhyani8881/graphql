@@ -1,26 +1,26 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: springboot-ingress-d1ffe9c3-66db-4da6-85da-6caf5b01f28c
+  name: springboot-ingress-0178701a-d442-4bb4-a324-5866a5617250
   namespace: 2e49f282-85d5-4866-af7d-8133a75e6769
   labels:
-    app: springboot-app-d1ffe9c3-66db-4da6-85da-6caf5b01f28c
+    app: springboot-app-0178701a-d442-4bb4-a324-5866a5617250
 spec:
   ingressClassName: nginx
   rules:
-    - host: tms1-t26beh.vv3ed4.us-east-2.febe.kbs
+    - host: tms1-mcqtso.mbne4w.us-east-2.febe.kbs
       http:
         paths:
           - backend:
               service:
-                name: springboot-service-d1ffe9c3-66db-4da6-85da-6caf5b01f28c
+                name: springboot-service-0178701a-d442-4bb4-a324-5866a5617250
                 port:
                   number: 80
             path: /graphiql
             pathType: Prefix
           - backend:
               service:
-                name: springboot-service-d1ffe9c3-66db-4da6-85da-6caf5b01f28c
+                name: springboot-service-0178701a-d442-4bb4-a324-5866a5617250
                 port:
                   number: 80
             path: /graphql
