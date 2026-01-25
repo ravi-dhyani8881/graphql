@@ -1,0 +1,15 @@
+extend type Query {
+ findusersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): usersResponse
+}
+
+type usersResponse {
+  data: [Recordsusers]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordsusers {
+id: String
+username: String
+
+}
