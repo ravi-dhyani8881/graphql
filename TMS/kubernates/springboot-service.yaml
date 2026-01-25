@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot-service-50f89a6b-2a8c-451f-bddf-2d7efb75110e
+  name: springboot-service-99c6f191-c106-4300-9ff2-15ab7314c964
   namespace: 2e49f282-85d5-4866-af7d-8133a75e6769
 spec:
   selector:
-    app: springboot-app-50f89a6b-2a8c-451f-bddf-2d7efb75110e
+    app: springboot-app-99c6f191-c106-4300-9ff2-15ab7314c964
   ports:
     - protocol: TCP
       port: 80

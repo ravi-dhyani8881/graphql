@@ -10,6 +10,6 @@ type usersResponse {
      
 type Recordsusers {
 id: String
-username: String
+email: String
 
 }
