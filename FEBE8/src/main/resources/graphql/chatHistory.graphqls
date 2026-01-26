@@ -11,7 +11,9 @@ type chatHistoryResponse {
 type RecordschatHistory {
 ID: String
 userId: String
-messages: String
+projectId: String
+role: String
+message: String
 createdAt: String
 updatedAt: String
 
