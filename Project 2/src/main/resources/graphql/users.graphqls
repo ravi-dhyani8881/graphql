@@ -11,7 +11,7 @@ type usersResponse {
 type Recordsusers {
 id: String
 name: String
-password: String
+password_hash: String
 email: String
 
 }
