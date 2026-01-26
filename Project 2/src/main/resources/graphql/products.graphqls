@@ -1,17 +1,17 @@
 extend type Query {
- findusersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): usersResponse
+ findproductsByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): productsResponse
 }
 
-type usersResponse {
-  data: [Recordsusers]
+type productsResponse {
+  data: [Recordsproducts]
   pagination: Pagination
   advanced: [Advanced]
 }
      
-type Recordsusers {
+type Recordsproducts {
 ID: String
-username: String
-email: String
+name: String
+description: String
 createdAt: String
 updatedAt: String
 
