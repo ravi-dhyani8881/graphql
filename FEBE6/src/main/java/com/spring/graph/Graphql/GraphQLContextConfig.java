@@ -22,9 +22,11 @@ public class GraphQLContextConfig implements WebGraphQlInterceptor {
                 ? authHeader.substring(7)
                 : null;
 
-        request.configureExecutionInput((executionInput, builder) ->
-                builder.graphQLContext(ctx -> ctx.put("token", token)).build()
-        );
+         if (token != null) {
+            request.configureExecutionInput((executionInput, builder) ->
+                    builder.graphQLContext(ctx -> ctx.put("token", token)).build()
+            );
+        }
 
         return chain.next(request);
     }

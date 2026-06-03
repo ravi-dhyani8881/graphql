@@ -17,6 +17,7 @@ public class organizationResponseTemplate {
 	@JsonProperty("data")
     private List<Recordsorganization> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

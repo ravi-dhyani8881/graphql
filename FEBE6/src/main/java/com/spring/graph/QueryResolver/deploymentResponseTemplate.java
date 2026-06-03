@@ -17,6 +17,7 @@ public class deploymentResponseTemplate {
 	@JsonProperty("data")
     private List<Recordsdeployment> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

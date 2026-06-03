@@ -5,6 +5,7 @@ extend type Query {
 type subOrganizationResponse {
   data: [RecordssubOrganization]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordssubOrganization {

@@ -17,6 +17,7 @@ public class projectResponseTemplate {
 	@JsonProperty("data")
     private List<Recordsproject> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

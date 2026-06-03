@@ -5,6 +5,7 @@ extend type Query {
 type versionResponse {
   data: [Recordsversion]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsversion {

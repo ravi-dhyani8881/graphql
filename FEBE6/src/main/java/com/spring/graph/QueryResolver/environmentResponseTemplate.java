@@ -17,6 +17,7 @@ public class environmentResponseTemplate {
 	@JsonProperty("data")
     private List<Recordsenvironment> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

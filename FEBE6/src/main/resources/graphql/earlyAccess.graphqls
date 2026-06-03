@@ -5,6 +5,7 @@ extend type Query {
 type earlyAccessResponse {
   data: [RecordsearlyAccess]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordsearlyAccess {

@@ -17,6 +17,7 @@ public class invitationResponseTemplate {
 	@JsonProperty("data")
     private List<Recordsinvitation> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	
