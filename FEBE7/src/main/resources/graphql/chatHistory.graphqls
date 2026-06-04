@@ -5,12 +5,15 @@ extend type Query {
 type chatHistoryResponse {
   data: [RecordschatHistory]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordschatHistory {
 ID: String
 userId: String
-messages: String
+projectId: String
+role: String
+message: String
 createdAt: String
 updatedAt: String
 

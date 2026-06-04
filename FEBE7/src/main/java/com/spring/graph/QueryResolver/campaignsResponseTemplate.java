@@ -17,6 +17,7 @@ public class campaignsResponseTemplate {
 	@JsonProperty("data")
     private List<Recordscampaigns> data;
     
+	@JsonProperty("advanced")
     public ArrayList<Advanced> advanced;
 
 	

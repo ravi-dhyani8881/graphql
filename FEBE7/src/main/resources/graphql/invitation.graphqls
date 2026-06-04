@@ -5,6 +5,7 @@ extend type Query {
 type invitationResponse {
   data: [Recordsinvitation]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsinvitation {

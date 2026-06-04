@@ -5,6 +5,7 @@ extend type Query {
 type deploymentResponse {
   data: [Recordsdeployment]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type Recordsdeployment {

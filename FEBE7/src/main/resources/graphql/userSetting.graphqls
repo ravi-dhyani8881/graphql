@@ -5,6 +5,7 @@ extend type Query {
 type userSettingResponse {
   data: [RecordsuserSetting]
   pagination: Pagination
+  advanced: [Advanced]
 }
      
 type RecordsuserSetting {
