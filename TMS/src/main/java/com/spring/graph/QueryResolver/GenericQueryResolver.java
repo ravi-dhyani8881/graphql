@@ -47,7 +47,7 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-5cf34904-0b8e-490e-a827-2fe20a001e89:80/"+toPascalCase("orders")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-8af58bbd-44fa-43a8-9b68-bba66385d4eb:80/"+toPascalCase("orders")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<ordersResponseTemplate> responseType =
 	                new ParameterizedTypeReference<ordersResponseTemplate>() {};
 
@@ -82,7 +82,7 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-5cf34904-0b8e-490e-a827-2fe20a001e89:80/"+toPascalCase("Supply")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-8af58bbd-44fa-43a8-9b68-bba66385d4eb:80/"+toPascalCase("Supply")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<SupplyResponseTemplate> responseType =
 	                new ParameterizedTypeReference<SupplyResponseTemplate>() {};
 
