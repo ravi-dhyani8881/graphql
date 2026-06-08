@@ -47,7 +47,7 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-bd1780bb-5416-460f-b58c-9c42d80d977b:80/"+toPascalCase("orders")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-be6cbce0-496d-407a-93fe-b1dff24f9010:80/"+toPascalCase("orders")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<ordersResponseTemplate> responseType =
 	                new ParameterizedTypeReference<ordersResponseTemplate>() {};
 
@@ -82,12 +82,47 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-bd1780bb-5416-460f-b58c-9c42d80d977b:80/"+toPascalCase("Supply")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-be6cbce0-496d-407a-93fe-b1dff24f9010:80/"+toPascalCase("Supply")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<SupplyResponseTemplate> responseType =
 	                new ParameterizedTypeReference<SupplyResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (SupplyResponseTemplate) response2;
+		}
+			public usersResponseTemplate  findusersByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+
+			headers.set("Authorization", 
+            "Bearer "+token
+        	);
+			
+			String fqParams = "";
+						if (filterQuery != null && !filterQuery.isEmpty()) {
+							fqParams = filterQuery.stream()
+									.map(fq -> "filterQuery=" + fq)
+									.collect(Collectors.joining("&"));
+						}
+
+			String url = "http://localhost:8080/api/users?"
+		            + "query=" + query
+		            + "&start=" + start
+		            + "&rows=" + rows
+		            + "&filterField=" + filterField
+		            + (fqParams.isEmpty() ? "" : "&" + fqParams)   // ✅ only append fqParams
+		            + "&sort=" + sort
+		            + "&advanceField=" + advanceField
+		            + "&advanceQuery=" + advanceQuery
+		            + "&advance=" + advance;				
+  
+		//	String url="http://rest-service-be6cbce0-496d-407a-93fe-b1dff24f9010:80/"+toPascalCase("users")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<usersResponseTemplate> responseType =
+	                new ParameterizedTypeReference<usersResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (usersResponseTemplate) response2;
 		}
 
 		public static String toPascalCase(String input) {
