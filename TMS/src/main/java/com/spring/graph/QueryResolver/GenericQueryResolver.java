@@ -19,7 +19,7 @@ public class GenericQueryResolver {
 	@Autowired
 	RestTemplate restTemplate;
 		
-			public usersResponseTemplate  findusersByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
+			public ordersResponseTemplate  findordersByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -36,7 +36,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/api/users?"
+			String url = "http://localhost:8080/api/orders?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -47,12 +47,47 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-99c6f191-c106-4300-9ff2-15ab7314c964:80/"+toPascalCase("users")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<usersResponseTemplate> responseType =
-	                new ParameterizedTypeReference<usersResponseTemplate>() {};
+		//	String url="http://rest-service-5cf34904-0b8e-490e-a827-2fe20a001e89:80/"+toPascalCase("orders")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<ordersResponseTemplate> responseType =
+	                new ParameterizedTypeReference<ordersResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (usersResponseTemplate) response2;
+			return (ordersResponseTemplate) response2;
+		}
+			public SupplyResponseTemplate  findSupplyByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+
+			headers.set("Authorization", 
+            "Bearer "+token
+        	);
+			
+			String fqParams = "";
+						if (filterQuery != null && !filterQuery.isEmpty()) {
+							fqParams = filterQuery.stream()
+									.map(fq -> "filterQuery=" + fq)
+									.collect(Collectors.joining("&"));
+						}
+
+			String url = "http://localhost:8080/api/Supply?"
+		            + "query=" + query
+		            + "&start=" + start
+		            + "&rows=" + rows
+		            + "&filterField=" + filterField
+		            + (fqParams.isEmpty() ? "" : "&" + fqParams)   // ✅ only append fqParams
+		            + "&sort=" + sort
+		            + "&advanceField=" + advanceField
+		            + "&advanceQuery=" + advanceQuery
+		            + "&advance=" + advance;				
+  
+		//	String url="http://rest-service-5cf34904-0b8e-490e-a827-2fe20a001e89:80/"+toPascalCase("Supply")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<SupplyResponseTemplate> responseType =
+	                new ParameterizedTypeReference<SupplyResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (SupplyResponseTemplate) response2;
 		}
 
 		public static String toPascalCase(String input) {
