@@ -16,10 +16,9 @@ email: String
 password: String
 userActivationKey: String
 userStatus: String
-middleName: String
+company: String
 firstName: String
 lastName: String
-address: String
-role: String
+middleName: String
 
 }
