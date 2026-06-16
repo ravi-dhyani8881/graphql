@@ -19,5 +19,7 @@ company: String
 firstName: String
 lastName: String
 middleName: String
+role: String
+address: String
 
 }
