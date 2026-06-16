@@ -47,14 +47,14 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-aeab4d13-2631-4328-b60d-9071f88078ef:80/"+toPascalCase("orders")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-9317dd5e-4641-4ed6-ac0c-54f3f7636e6d:80/"+toPascalCase("orders")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<ordersResponseTemplate> responseType =
 	                new ParameterizedTypeReference<ordersResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (ordersResponseTemplate) response2;
 		}
-			public usersResponseTemplate  findusersByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
+			public userResponseTemplate  finduserByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
 			HttpHeaders headers = new HttpHeaders();
 		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -71,7 +71,7 @@ public class GenericQueryResolver {
 									.collect(Collectors.joining("&"));
 						}
 
-			String url = "http://localhost:8080/api/users?"
+			String url = "http://localhost:8080/api/user?"
 		            + "query=" + query
 		            + "&start=" + start
 		            + "&rows=" + rows
@@ -82,12 +82,12 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-aeab4d13-2631-4328-b60d-9071f88078ef:80/"+toPascalCase("users")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
-		    ParameterizedTypeReference<usersResponseTemplate> responseType =
-	                new ParameterizedTypeReference<usersResponseTemplate>() {};
+		//	String url="http://rest-service-9317dd5e-4641-4ed6-ac0c-54f3f7636e6d:80/"+toPascalCase("user")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<userResponseTemplate> responseType =
+	                new ParameterizedTypeReference<userResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
-			return (usersResponseTemplate) response2;
+			return (userResponseTemplate) response2;
 		}
 			public supplyResponseTemplate  findsupplyByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
 				
@@ -117,7 +117,7 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-aeab4d13-2631-4328-b60d-9071f88078ef:80/"+toPascalCase("supply")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-9317dd5e-4641-4ed6-ac0c-54f3f7636e6d:80/"+toPascalCase("supply")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<supplyResponseTemplate> responseType =
 	                new ParameterizedTypeReference<supplyResponseTemplate>() {};
 
