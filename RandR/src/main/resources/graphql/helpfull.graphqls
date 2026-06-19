@@ -1,0 +1,22 @@
+extend type Query {
+ findhelpfullByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): helpfullResponse
+}
+
+type helpfullResponse {
+  data: [Recordshelpfull]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordshelpfull {
+ID: String
+reviewId: String
+contentId: String
+userId: String
+createdDate: String
+updatedDate: String
+
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
+    findreviewByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): reviewResponse
+    findcontentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): contentResponse
+}

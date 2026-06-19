@@ -1,0 +1,22 @@
+extend type Query {
+ findlikeByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): likeResponse
+}
+
+type likeResponse {
+  data: [Recordslike]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordslike {
+ID: String
+reviewId: String
+userId: String
+contentId: String
+createdDate: String
+updatedDate: String
+
+    findreviewByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): reviewResponse
+    findcontentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): contentResponse
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
+}

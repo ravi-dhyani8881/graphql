@@ -1,0 +1,24 @@
+extend type Query {
+ findreviewByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): reviewResponse
+}
+
+type reviewResponse {
+  data: [Recordsreview]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordsreview {
+ID: String
+contentId: String
+userId: String
+createdDate: String
+updatedDate: String
+
+    findcontentByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): contentResponse
+    finduserByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): userResponse
+    findlikeByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): likeResponse
+    findhelpfullByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): helpfullResponse
+    finddislikeByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): dislikeResponse
+    findreplyByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): replyResponse
+}
