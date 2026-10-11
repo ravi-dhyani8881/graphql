@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-app-4bd7ef21-deca-430e-81c4-f8ae3f003bb6
+  name: springboot-app-5a387236-59a7-4f33-bba3-a2c3572e686c
   namespace: 85c8a741-63c7-438b-8abe-9fe23efa41e5
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springboot-app-4bd7ef21-deca-430e-81c4-f8ae3f003bb6
+      app: springboot-app-5a387236-59a7-4f33-bba3-a2c3572e686c
   template:
     metadata:
       labels:
-        app: springboot-app-4bd7ef21-deca-430e-81c4-f8ae3f003bb6
+        app: springboot-app-5a387236-59a7-4f33-bba3-a2c3572e686c
     spec:
       containers:
       - name: springboot
