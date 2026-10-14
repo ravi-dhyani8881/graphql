@@ -1,0 +1,23 @@
+extend type Query {
+ findloansByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): loansResponse
+}
+
+type loansResponse {
+  data: [Recordsloans]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordsloans {
+ID: String
+userId: String
+bookId: String
+loanDate: String
+dueDate: String
+returned: String
+createdAt: String
+updatedAt: String
+
+    findusersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): usersResponse
+    findbooksByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): booksResponse
+}

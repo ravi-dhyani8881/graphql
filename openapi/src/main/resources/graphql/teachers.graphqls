@@ -1,0 +1,19 @@
+extend type Query {
+ findteachersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): teachersResponse
+}
+
+type teachersResponse {
+  data: [Recordsteachers]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordsteachers {
+ID: String
+userId: String
+subject: String
+createdAt: String
+updatedAt: String
+
+    findusersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): usersResponse
+}
