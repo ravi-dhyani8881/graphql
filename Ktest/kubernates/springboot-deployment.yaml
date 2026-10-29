@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-app-f67145a2-71f2-4be8-a547-c61da9196959
+  name: springboot-app-f54f76e3-c181-4b78-ad84-7d56578cb004
   namespace: 2e49f282-85d5-4866-af7d-8133a75e6769
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springboot-app-f67145a2-71f2-4be8-a547-c61da9196959
+      app: springboot-app-f54f76e3-c181-4b78-ad84-7d56578cb004
   template:
     metadata:
       labels:
-        app: springboot-app-f67145a2-71f2-4be8-a547-c61da9196959
+        app: springboot-app-f54f76e3-c181-4b78-ad84-7d56578cb004
     spec:
       containers:
       - name: springboot
-        image: ravi8881/2e49f282-85d5-4866-af7d-8133a75e6769-f5e66296-a68f-4fae-ab34-616938e14a6b-bc5fa525-1f32-4c53-bf17-b98dd59ff12e-f137c0c0-3fe8-4f0e-ac75-a216f1f465bd-graph:7.0.0
+        image: ravi8881/2e49f282-85d5-4866-af7d-8133a75e6769-f5e66296-a68f-4fae-ab34-616938e14a6b-bc5fa525-1f32-4c53-bf17-b98dd59ff12e-f137c0c0-3fe8-4f0e-ac75-a216f1f465bd-graph:8.0.0
         ports:
         - containerPort: 8081
