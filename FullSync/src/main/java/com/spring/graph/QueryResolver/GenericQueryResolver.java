@@ -47,7 +47,7 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-9bba5372-c478-49cf-ae18-d47bd44c32a8:80/"+toPascalCase("User")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-f6c8a4f5-c8bf-48d1-bc64-063d7cb7cbfb:80/"+toPascalCase("User")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<UserResponseTemplate> responseType =
 	                new ParameterizedTypeReference<UserResponseTemplate>() {};
 
