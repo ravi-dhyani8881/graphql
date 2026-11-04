@@ -1,26 +1,26 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: springboot-ingress-5a387236-59a7-4f33-bba3-a2c3572e686c
+  name: springboot-ingress-fe2dde9c-6566-47b1-a370-6a7bd082aa1f
   namespace: 85c8a741-63c7-438b-8abe-9fe23efa41e5
   labels:
-    app: springboot-app-5a387236-59a7-4f33-bba3-a2c3572e686c
+    app: springboot-app-fe2dde9c-6566-47b1-a370-6a7bd082aa1f
 spec:
   ingressClassName: nginx
   rules:
-    - host: https://api.febecloud.com
+    - host: febecloud.com
       http:
         paths:
           - backend:
               service:
-                name: springboot-service-5a387236-59a7-4f33-bba3-a2c3572e686c
+                name: springboot-service-fe2dde9c-6566-47b1-a370-6a7bd082aa1f
                 port:
                   number: 80
             path: /graphiql
             pathType: Prefix
           - backend:
               service:
-                name: springboot-service-5a387236-59a7-4f33-bba3-a2c3572e686c
+                name: springboot-service-fe2dde9c-6566-47b1-a370-6a7bd082aa1f
                 port:
                   number: 80
             path: /graphql
