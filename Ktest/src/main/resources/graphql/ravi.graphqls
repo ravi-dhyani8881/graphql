@@ -1,0 +1,18 @@
+extend type Query {
+ findraviByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): raviResponse
+}
+
+type raviResponse {
+  data: [Recordsravi]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordsravi {
+ID: String
+address: String
+createdAt: String
+updatedAt: String
+
+    findUsersByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String ): UsersResponse
+}

@@ -47,12 +47,47 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-5a06beff-7526-4ef8-8303-d4fa2bbdf045:80/"+toPascalCase("Users")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-d6c03c22-9de9-4d7d-9ceb-47faa5e8466b:80/"+toPascalCase("Users")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<UsersResponseTemplate> responseType =
 	                new ParameterizedTypeReference<UsersResponseTemplate>() {};
 
 			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
 			return (UsersResponseTemplate) response2;
+		}
+			public raviResponseTemplate  findraviByQuery(String query, String start,  String rows, String filterField,  List<String>	 filterQuery,  String sort, String  advanceField,  String advanceQuery,  String advance, String token) {	
+				
+			HttpHeaders headers = new HttpHeaders();
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+		    HttpEntity <String> entity = new HttpEntity<String>(headers);
+
+			headers.set("Authorization", 
+            "Bearer "+token
+        	);
+			
+			String fqParams = "";
+						if (filterQuery != null && !filterQuery.isEmpty()) {
+							fqParams = filterQuery.stream()
+									.map(fq -> "filterQuery=" + fq)
+									.collect(Collectors.joining("&"));
+						}
+
+			String url = "http://localhost:8080/api/ravi?"
+		            + "query=" + query
+		            + "&start=" + start
+		            + "&rows=" + rows
+		            + "&filterField=" + filterField
+		            + (fqParams.isEmpty() ? "" : "&" + fqParams)   // ✅ only append fqParams
+		            + "&sort=" + sort
+		            + "&advanceField=" + advanceField
+		            + "&advanceQuery=" + advanceQuery
+		            + "&advance=" + advance;				
+  
+		//	String url="http://rest-service-d6c03c22-9de9-4d7d-9ceb-47faa5e8466b:80/"+toPascalCase("ravi")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		    ParameterizedTypeReference<raviResponseTemplate> responseType =
+	                new ParameterizedTypeReference<raviResponseTemplate>() {};
+
+			var response2=restTemplate.exchange(url,HttpMethod.GET, entity, responseType).getBody();
+			return (raviResponseTemplate) response2;
 		}
 
 		public static String toPascalCase(String input) {

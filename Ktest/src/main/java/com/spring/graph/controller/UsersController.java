@@ -13,6 +13,7 @@ import org.springframework.graphql.data.method.annotation.SchemaMapping;
 import com.spring.graph.QueryResolver.UsersResponseTemplate;
 import com.spring.graph.QueryResolver.GenericQueryResolver;
 import com.spring.graph.Model.RecordsUsers;
+  import com.spring.graph.QueryResolver.raviResponseTemplate;
 
 
 @Controller
@@ -28,5 +29,24 @@ public class UsersController {
     return  genericQueryResolver.findUsersByQuery(query, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);	
     }
 	  
+  @SchemaMapping
+  public raviResponseTemplate findraviByQuery(
+    RecordsUsers content,
+    @Argument String query,
+    @Argument String start,
+    @Argument String rows,
+    @Argument String filterField,
+    @Argument List<String> filterQuery,
+    @Argument String sort,
+    @Argument String advanceField,
+    @Argument String advanceQuery,
+    @Argument String advance,
+    DataFetchingEnvironment env
+    
+  ) throws Exception {
+    String query2 = QueryUtils.replaceTokens(query, content);  
+    String token = env.getGraphQlContext().get("token");	
+    return genericQueryResolver.findraviByQuery(query2, start, rows, filterField, filterQuery, sort, advanceField, advanceQuery, advance, token);
+  }
 
 }
