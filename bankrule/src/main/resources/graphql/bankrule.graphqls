@@ -1,0 +1,18 @@
+extend type Query {
+ findbankruleByQuery(query: String, start: String, rows: String, filterField: String, filterQuery: [String], sort: String, advanceField: String, advanceQuery: String, advance: String): bankruleResponse
+}
+
+type bankruleResponse {
+  data: [Recordsbankrule]
+  pagination: Pagination
+  advanced: [Advanced]
+}
+     
+type Recordsbankrule {
+ID: String
+username: String
+createdAt: String
+updatedAt: String
+email: String
+
+}
