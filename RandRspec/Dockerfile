@@ -1,0 +1,11 @@
+FROM eclipse-temurin:17-jre-focal
+EXPOSE 8082
+# ADD target/RandRspec-0.0.1-SNAPSHOT.jar RandRspec-0.0.1-SNAPSHOT.jar
+
+# ADD /home/runner/work/graphql/graphql/RandRspec/target/RandRspec-0.0.1-SNAPSHOT.jar RandRspec-0.0.1-SNAPSHOT.jar
+
+ADD target/RandRspec-0.0.1-SNAPSHOT.jar RandRspec-0.0.1-SNAPSHOT.jar
+
+# ADD /home/runner/.m2/repository/com/spring/graph/RandRspec/0.0.1-SNAPSHOT/RandRspec-0.0.1-SNAPSHOT.jar RandRspec-0.0.1-SNAPSHOT.jar
+# /home/runner/.m2/repository/com/spring/graph/Prototype/0.0.1-SNAPSHOT/Prototype-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "RandRspec-0.0.1-SNAPSHOT.jar"]
