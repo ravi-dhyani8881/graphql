@@ -47,7 +47,7 @@ public class GenericQueryResolver {
 		            + "&advanceQuery=" + advanceQuery
 		            + "&advance=" + advance;				
   
-		//	String url="http://rest-service-315cb01e-69b2-4472-94b8-1992352da375:80/"+toPascalCase("bankrule")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
+		//	String url="http://rest-service-3db9497d-2052-4c52-a6fd-c7854f72ec0f:80/"+toPascalCase("bankrule")+"/findByQuery?query="+query+"&start="+start+"&rows="+rows+"&filterField="+filterField+"&filterQuery="+filterQuery+"&sort="+sort+"&advanceField="+advanceField+"&advanceQuery="+advanceQuery+"&advance="+advance;
 		    ParameterizedTypeReference<bankruleResponseTemplate> responseType =
 	                new ParameterizedTypeReference<bankruleResponseTemplate>() {};
 
